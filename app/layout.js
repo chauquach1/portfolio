@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Providers } from "./providers";
+import NavBar from "./components/NavBar";
 
 export const metadata = {
   title: "Chau Quach Dev",
@@ -10,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavBar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

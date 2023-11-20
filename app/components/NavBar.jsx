@@ -11,6 +11,7 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import { useState } from "react";
+import ContactDropdown from "./ContactDropDown";
 
 
 export default function NavBar() {
@@ -25,40 +26,37 @@ export default function NavBar() {
   ]
 
   return (
-    <Navbar shouldHideOnScroll>
+    <Navbar >
 
       {/* Menu Toggle for Mobile */}
-      <NavbarContent className="sm:hidden" justify="start" isBlurred>
+      <NavbarContent className="sm:hidden" justify="start" >
         <NavbarMenuToggle />
       </NavbarContent>
     
       {/* Normal View */}
       <NavbarBrand>
-        <p className="font-bold text-inherit">CQ.Dev</p>
+        <p className="font-bold text-inherit">CQ</p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center" isBlurred="false">
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            About Me
+          <Link color="foreground" href="/">
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/#portfolio">
             Portfolio
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Experience
-          </Link>
+          <a target="_blank" color="foreground" className="text-black" href="/resume.pdf">
+            Resume
+          </a>
         </NavbarItem>
       </NavbarContent>
-
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Contact Me
-          </Button>
+          <ContactDropdown />
         </NavbarItem>
       </NavbarContent>
 
