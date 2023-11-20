@@ -30,7 +30,7 @@ export default function Home() {
         id="contact"
         className="container flex flex-row items-center justify-between h-fit max-w-3xl py-8"
       >
-        <h1>Let's Connect!</h1>
+        <h1>Connect With Me</h1>
         <ContactMeSection />
       </section>
     </main>
