@@ -1,11 +1,11 @@
 // import {Image} from "@nextui-org/react"
 import Image from "next/image";
 import profile from "../../public/profile.png";
+import SkillsSection from "./SkillsSection";
 
 export default function IntroCard() {
   return (
     <div className="flex flex-col w-full max-w-3xl gap-4">
-      <p className="self-start font-thin italic"> Hi there, my name is</p>
       <div className="flex flex-col self-center bg-black/40 shadow-2xl rounded-2xl w-full max-w-2xl p-2">
         <div className="w-fit self-center">
           <h1 className="text-2xl sm:text-5xl text-center text-white">
