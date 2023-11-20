@@ -11,7 +11,7 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import { useState } from "react";
-import ContactDropdown from "./ContactDropDown";
+import ContactDropdown from "./ContactDropdown";
 
 
 export default function NavBar() {
