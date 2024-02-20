@@ -39,10 +39,9 @@ export default function ProjectCard({project, projectIndex, setProjectIndex}) {
 
   return (
     <Card
-      className="w-[300px] bg-transparent border-1 rounded-xl text-white hover:text-red-200 hover:bg-blue-300 transition-all duration-300 ease-in-out"
+      className="w-[300px] bg-transparent border-1 rounded-xl text-white hover:text-slate-600 hover:bg-blue-300 transition-all duration-300 ease-in-out"
       onMouseEnter={() => handleHoverEnter()}
       onPress={handlePress}
-      isHoverable
     >
       <CardHeader className="pb-0">
         <h3 className="text-2xl">{project.title}</h3>

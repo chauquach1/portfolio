@@ -125,7 +125,7 @@ export default function PortfolioSection() {
       >
         <div
           id="projects-index"
-          className="container flex flex-col w-fit gap-2 p-2"
+          className="container flex flex-col w-fit gap-2"
         >
           <ProjectCard
             id="planur-card"
