@@ -1,5 +1,5 @@
 import { Link, Divider } from "@nextui-org/react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ProjectDisplay({ project }) {
   const title = project.title;
@@ -20,13 +20,13 @@ export default function ProjectDisplay({ project }) {
       <div id="project-links" className="flex flex-row justify-between">
         <h1 className="font-extrabold text-5xl">{title}</h1>
         <div id="link-container" className="flex flex-row items-center gap-2">
-          <Link href={liveLink} color="primary" size="small" target="_blank">
-            Live
-          </Link>
+          <a href={liveLink} color="primary" size="small" target="_blank" className="hover:text-white">
+            <FaExternalLinkAlt />
+          </a>
           <Divider orientation="vertical" className="max-h-5" />
-          <Link href={github} color="primary" size="small" target="_blank">
+          <a href={github} color="primary" size="small" target="_blank" className="hover:text-white">
             <FaGithub />
-          </Link>
+          </a>
         </div>
       </div>
       <div
