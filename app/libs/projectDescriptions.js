@@ -1,3 +1,12 @@
+import planur1 from "../../public/planur/planur1.png";
+import planur2 from "../../public/planur/planur2.png";
+import planur3 from "../../public/planur/planur3.png";
+import planur4 from "../../public/planur/planur4.png";
+import reactemon1 from "../../public/reactemon/reactemon1.png";
+import reactemon2 from "../../public/reactemon/reactemon2.png";
+import wurdle1 from "../../public/wurdle/wurdle1.png";
+import wurdle2 from "../../public/wurdle/wurdle2.png";
+
 const projectDescriptions = [
   {
     title: "Planur",
