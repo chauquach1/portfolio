@@ -35,12 +35,11 @@ export default function ProjectCard({project, projectIndex, setProjectIndex}) {
 
   const handleHoverEnter = () => {
     setProjectIndex(projectIndex);
-    console.log("hovered");
   }
 
   return (
     <Card
-      className="w-[300px] bg-transparent border-y-1 rounded-none text-white hover:text-black hover:border-white hover:bg-white "
+      className="w-[300px] bg-transparent border-1 rounded-xl text-white hover:text-red-200 hover:bg-blue-300 transition-all duration-300 ease-in-out"
       onMouseEnter={() => handleHoverEnter()}
       onPress={handlePress}
       isHoverable
