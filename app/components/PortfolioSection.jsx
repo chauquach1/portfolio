@@ -117,11 +117,11 @@ export default function PortfolioSection() {
   }, [projectIndex]);
 
   return (
-    <div className="container flex flex-col items-center max-h-[400px] w-full gap-4 my-4">
+    <div className=" flex flex-col items-center max-h-[400px] w-full gap-4 my-4">
       <h1 className="text-3xl text-center text-white">My Work</h1>
       <div
         id="project-container"
-        className="flex flex-row justify-center gap-0 sm:gap-2"
+        className="w-full flex flex-row justify-center gap-0 sm:gap-2"
       >
         <div
           id="projects-index"
@@ -150,7 +150,7 @@ export default function PortfolioSection() {
         <div id="project-display-container" className="w-full h-full overflow-scroll">
           <ProjectDisplay project={project} />
         </div>
-        <div
+        {/* <div
           id="project-preview-images"
           className="columns-1 flex flex-col gap-2 h-[600px] py-2 w-1/2"
         >
@@ -164,7 +164,7 @@ export default function PortfolioSection() {
           }
           )}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
