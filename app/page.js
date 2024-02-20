@@ -7,7 +7,7 @@ import SkillsSection from "./components/SkillsSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start ">
+    <main className="flex flex-col min-h-screen w-full items-center justify-center bg-slate-600">
       <section
         id="intro"
         className="row flex flex-row justify-center w-full h-1/2 py-6"
@@ -22,13 +22,13 @@ export default function Home() {
       </section>
       <section
         id="portfolio"
-        className="row flex flex-row justify-center w-full h-[900px] px-6"
+        className="justify-center min-w-full h-[900px] px-2"
       >
         <PortfolioSection />
       </section>
       <section
         id="contact"
-        className="container flex flex-row items-center justify-between h-fit max-w-3xl py-8"
+        className="items-center justify-between h-fit max-w-3xl py-8"
       >
         <h1>Connect With Me</h1>
         <ContactMeSection />
