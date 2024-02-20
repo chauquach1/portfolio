@@ -12,7 +12,7 @@ const funFacts = {
 export default function IntroCard() {
   return (
     <div className="flex flex-col w-full max-w-3xl gap-4">
-      <div className="flex flex-col self-center bg-black/40 shadow-2xl rounded-2xl w-full max-w-2xl p-2">
+      <div className="flex flex-col self-center bg-black/40 shadow-2xl rounded-2xl w-full max-w-2xl p-4 pb-10">
         <div className="w-fit self-center">
           <h1 className="text-2xl sm:text-5xl text-center text-white">
             Chau Quach
@@ -29,7 +29,7 @@ export default function IntroCard() {
             <p>create solutions</p>
             <p>invite new ideas &#125;</p>
           </ul>
-          <div className="z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="z-10 absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-1/2">
             <Image
               priority
               src={profile}
@@ -51,12 +51,12 @@ export default function IntroCard() {
             </ul>
           </div>
         </div>
-        <div className="p-3 sm:p-7 text-small sm:text-lg text-center">
+        {/* <div className="p-3 sm:p-7 text-small sm:text-lg text-center">
           <p>
             I am a creative, a team leader, and a problem solver turned
             developer!
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
