@@ -118,7 +118,7 @@ export default function PortfolioSection() {
 
   return (
     <div className=" flex flex-col items-center max-h-[400px] w-full gap-4 my-4">
-      <h1 className="text-3xl text-center text-white">My Work</h1>
+      <h1 className="text-3xl text-center text-white">Recent Projects</h1>
       <div
         id="project-container"
         className="w-full flex flex-row justify-center gap-0 sm:gap-2"
@@ -127,7 +127,6 @@ export default function PortfolioSection() {
           id="projects-index"
           className="container flex flex-col w-fit gap-2"
         >
-          <h1 className="text-start text-white">Recent Projects</h1>
           <ProjectCard
             id="planur-card"
             project={projectDescriptions[0]}
@@ -147,7 +146,7 @@ export default function PortfolioSection() {
             projectIndex={projectIndex}
           />
         </div>
-        <div id="project-display-container" className="w-full h-full overflow-scroll">
+        <div id="project-display-container" className="container w-full h-full overflow-scroll">
           <ProjectDisplay project={project} />
         </div>
         {/* <div
