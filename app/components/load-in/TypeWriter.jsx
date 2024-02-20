@@ -1,7 +1,7 @@
 "use client";
 import {useState, useEffect} from "react";
 
-export default function TypeWriter({text, speed, initialDelay}) {
+export default function TypeWriter({text, speed, closeLoadIn, setCloseLoadIn}) {
   const [startType, setStartType] = useState(false);
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
@@ -9,7 +9,7 @@ export default function TypeWriter({text, speed, initialDelay}) {
   useEffect(() => {
     setTimeout(() => {
       setStartType(true);
-    }, 500);
+    }, 300);
   }, []);
 
   useEffect(() => {
@@ -18,6 +18,12 @@ export default function TypeWriter({text, speed, initialDelay}) {
         setDisplayText(displayText + text[index]);
         setIndex(index + 1);
       }, speed);
+    }
+
+    if (index === text.length) {
+      setTimeout(() => {
+        setCloseLoadIn(true);
+      }, 1200);
     }
   }, [startType, index]);
 

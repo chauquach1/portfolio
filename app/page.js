@@ -7,7 +7,7 @@ import SkillsSection from "./components/SkillsSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen w-full items-center justify-center bg-slate-600">
+    <main className="flex flex-col min-h-screen w-full items-center justify-center bg-slate-900">
       <section
         id="intro"
         className="row flex flex-row justify-center w-full h-1/2 py-6"
@@ -16,7 +16,7 @@ export default function Home() {
       </section>
       <section
         id="skills"
-        className="row flex flex-row justify-center bg-white/20 w-full h-1/2 py-6"
+        className="row flex flex-row justify-center  w-full h-1/2 py-6"
       >
         <SkillsSection />
       </section>
