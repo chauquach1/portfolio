@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 export default function SkillsSection() {
   return (
-<div className="container flex flex-row flex-wrap justify-around px-6">
+<div className="container flex flex-row flex-wrap justify-around px-6 text-white">
   <>
   {/* First Column */}
   <div className="flex-1 text-center">

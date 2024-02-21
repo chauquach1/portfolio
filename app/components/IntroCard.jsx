@@ -11,20 +11,21 @@ const funFacts = {
 
 export default function IntroCard() {
   return (
-    <div className="flex flex-col w-full max-w-3xl gap-4">
-      <div className="flex flex-col self-center bg-black/40 shadow-2xl rounded-2xl w-full max-w-2xl p-4 pb-10">
+    <>
+    {/* <div className="flex flex-col w-full max-w-3xl gap-4"> */}
+      <div className="flex flex-col self-start bg-white/20 shadow-2xl rounded-2xl w-full max-w-6xl p-4 pb-10">
         <div className="w-fit self-center">
           <h1 className="text-2xl sm:text-5xl text-center text-white">
             Chau Quach
           </h1>
-          <h2 className="text-xs sm:text-sm relative left-4 bottom-2 font-thin italic text-end text-gray-300">
+          <h2 className="text-xs sm:text-sm relative left-4 bottom-2 font-thin italic text-end text-black">
             Fullstack Developer
           </h2>
         </div>
         <div className="relative text-center">
           {" "}
           {/* Use relative positioning and text-center */}
-          <ul className="font-thin italic text-gray-300/20 text-start text-sm sm:text-2xl md:text-3xl ">
+          <ul className="font-thin italic text-gray-600 text-start text-sm sm:text-2xl md:text-3xl ">
             <p>&#123; seek opportunities</p>
             <p>create solutions</p>
             <p>invite new ideas &#125;</p>
@@ -43,7 +44,7 @@ export default function IntroCard() {
           -translate-x-28 -translate-y-1/2 
           sm:-translate-x-30 sm:-translate-y-30"
           >
-            <ul className="font-thin italic text-gray-300/20 text-end text-sm sm:text-2xl md:text-3xl">
+            <ul className="font-thin italic text-gray-600 text-end text-sm sm:text-2xl md:text-3xl">
               
               <p>&#123; san diego, ca</p>
               <p>snowboarding</p>
@@ -58,6 +59,7 @@ export default function IntroCard() {
           </p>
         </div> */}
       </div>
-    </div>
+    {/* </div> */}
+      </>
   );
 }

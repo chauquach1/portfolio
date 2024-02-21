@@ -7,10 +7,10 @@ import SkillsSection from "./components/SkillsSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen w-full items-center justify-center bg-slate-900">
+    <main className="flex flex-col min-h-screen w-full items-center justify-center bg-gray-950">
       <section
         id="intro"
-        className="row flex flex-row justify-center w-full h-1/2 py-6"
+        className="row flex flex-row h-screen justify-center p-6 w-full"
       >
         <IntroCard />
       </section>
