@@ -1,5 +1,4 @@
 import "./globals.css";
-import NavBar from "./components/NavBar";
 import LoadIn from "./components/load-in/LoadIn";
 
 export const metadata = {
@@ -12,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex flex-col items-center justify-center min-w-full">
         <LoadIn />
-        <NavBar />
+        {/* <NavBar /> */}
         {children}
       </body>
     </html>

@@ -2,6 +2,13 @@
 import Image from "next/image";
 import profile from "../../public/profile.png";
 import SkillsSection from "./SkillsSection";
+import { Calistoga } from "next/font/google";
+
+const calistoga = Calistoga({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
 
 const funFacts = {
   location: "San Diego, CA",
@@ -12,54 +19,45 @@ const funFacts = {
 export default function IntroCard() {
   return (
     <>
-    {/* <div className="flex flex-col w-full max-w-3xl gap-4"> */}
-      <div className="flex flex-col self-start bg-white/20 shadow-2xl rounded-2xl w-full max-w-6xl p-4 pb-10">
-        <div className="w-fit self-center">
-          <h1 className="text-2xl sm:text-5xl text-center text-white">
+      <div className="flex flex-row self-center items-start justify-between sm:rounded-2xl w-full p-4 pb-10">
+        <div className="flex flex-row items-center justify-evenly w-full">
+        <div className="absolute z-0 self-start me-auto left-2 sm:left-6 lg:left-8">
+          <ul className="font-thin italic text-gray-600 text-start text-sm sm:text-lg md:text-2xl">
+            <p>seek opportunities</p>
+            <p>create solutions</p>
+            <p>invite new ideas</p>
+          </ul>
+        </div>
+        <div className="flex flex-col">
+          <h1 className={`${calistoga.className} text-2xl sm:text-8xl text-center text-white`}>
             Chau Quach
           </h1>
-          <h2 className="text-xs sm:text-sm relative left-4 bottom-2 font-thin italic text-end text-black">
+          <h2 className="text-md relative right-1 bottom-4 font-thin italic text-end text-blue-800">
             Fullstack Developer
           </h2>
         </div>
-        <div className="relative text-center">
-          {" "}
-          {/* Use relative positioning and text-center */}
-          <ul className="font-thin italic text-gray-600 text-start text-sm sm:text-2xl md:text-3xl ">
-            <p>&#123; seek opportunities</p>
-            <p>create solutions</p>
-            <p>invite new ideas &#125;</p>
+        <div
+          className="absolute z-0 self-start ms-auto right-2 sm:right-6 lg:right-8"
+        >
+          <ul className="font-thin italic text-gray-600 text-end mx-auto text-sm sm:text-lg md:text-2xl">
+            <p>san diego, ca</p>
+            <p>snowboarding</p>
+            <p>i love dogs</p>
           </ul>
-          <div className="z-10 absolute top-1/2 left-1/2 transform -translate-x-1/3 -translate-y-1/2">
-            <Image
-              priority
-              src={profile}
-              alt="Picture of Chau"
-              style={{ objectFit: "contain" }}
-              className="h-20 w-20 sm:h-32 sm:w-32"
-            />
-          </div>
-          <div
-            className="z-9 absolute top-1/2 -right-28 transform
-          -translate-x-28 -translate-y-1/2 
-          sm:-translate-x-30 sm:-translate-y-30"
-          >
-            <ul className="font-thin italic text-gray-600 text-end text-sm sm:text-2xl md:text-3xl">
-              
-              <p>&#123; san diego, ca</p>
-              <p>snowboarding</p>
-              <p>i love dogs &#125;</p>
-            </ul>
-          </div>
         </div>
-        {/* <div className="p-3 sm:p-7 text-small sm:text-lg text-center">
-          <p>
-            I am a creative, a team leader, and a problem solver turned
-            developer!
-          </p>
-        </div> */}
+        </div>
       </div>
-    {/* </div> */}
-      </>
+    </>
   );
 }
+
+
+{/* <div className="translate-x-16 -translate-y-4">
+<Image
+  priority
+  src={profile}
+  alt="Picture of Chau"
+  style={{ objectFit: "contain" }}
+  className="h-20 w-20 sm:h-32 sm:w-32"
+/>
+</div> */}
