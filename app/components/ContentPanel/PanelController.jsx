@@ -5,6 +5,7 @@ export default function PanelController({activePanel, setActivePanel}) {
     skills: "Skills",
     work: "Projects",
     contact: "Contact Me",
+    resume: "Resume",
   }
 
   return (
