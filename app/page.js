@@ -8,13 +8,13 @@ export default function Home() {
     <main className="flex flex-col min-h-screen w-full items-center justify-start bg-gray-950">
       <section
         id="intro"
-        className="row flex flex-col items-center p-0 sm:p-4 xl:p-2 2xl:p-6 h-max w-full"
+        className="container flex flex-col items-center p-0 sm:p-4 xl:p-2 2xl:p-6 h-max w-full"
       >
         <IntroCard />
       </section>
       <section
         id="about"
-        className="row flex flex-col items-center p-0 sm:p-4 xl:p-2 2xl:p-6 h-full w-full"
+        className="container flex flex-col items-center p-0 sm:p-4 xl:p-2 2xl:p-6 h-full w-full"
       >
         <ContentContainer />
       </section>
