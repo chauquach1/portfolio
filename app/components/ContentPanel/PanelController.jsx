@@ -9,7 +9,7 @@ export default function PanelController({activePanel, setActivePanel}) {
   }
 
   return (
-      <div className="flex flex-col self-start items-end min-w-fit px-4 gap-2 font-thin">
+      <div className="hidden lg:flex flex-col self-start items-end min-w-fit px-4 gap-2 font-thin">
         {Object.keys(buttonText).map((panel, index) => {
           return (
             <button

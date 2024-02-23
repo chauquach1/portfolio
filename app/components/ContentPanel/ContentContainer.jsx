@@ -11,16 +11,16 @@ export default function ContentContainer() {
   }, [activePanel]);
   
   return (
-    <div className="flex flex-row items-center justify-end w-full">
+    <>
       <PanelController
         activePanel={activePanel}
         setActivePanel={setActivePanel}
       />
-      <div className="flex flex-col gap-6 pt-1">
+      <div className="flex flex-col items-center w-full gap-6 pt-1">
         <AboutMe />
         <SkillsSection />
         <PortfolioSection />
       </div>
-    </div>
+    </>
   );
 }
