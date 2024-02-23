@@ -13,7 +13,7 @@ export default function PortfolioSection() {
   }, [projectIndex]);
 
   return (
-    <div className=" flex flex-col items-center min-h-[1000px] w-full gap-4 p-2 rounded-2xl ">
+    <div className=" flex flex-col items-center w-full gap-4 p-2 rounded-2xl ">
       <h1 className="text-3xl text-center text-white">Recent Projects</h1>
       <div
         id="project-container"
@@ -42,7 +42,7 @@ export default function PortfolioSection() {
             projectIndex={projectIndex}
           />
         </div>
-        <div id="project-display-container" className="container w-full h-full overflow-scroll">
+        <div id="project-display-container" className="container w-full min-h-[1000px]  overflow-scroll">
           <ProjectDisplay project={project} />
         </div>
       </div>

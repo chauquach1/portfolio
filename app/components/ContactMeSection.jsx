@@ -4,7 +4,7 @@ import { RxLinkedinLogo } from "react-icons/rx";
 
 export default function ContactMeSection() {
   return (
-    <>
+    <div className="flex flex-col">
       <div className="flex flex-row items-center gap-2">
         <MdMail />
         <a href="mailto:chauquach.dev@gmail.com">
@@ -23,6 +23,6 @@ export default function ContactMeSection() {
           <p>in/chauquach</p>
         </a>
       </div>
-    </>
+    </div>
   );
 }
