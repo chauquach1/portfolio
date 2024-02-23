@@ -3,7 +3,7 @@ export default function PanelController({activePanel, setActivePanel}) {
   const buttonText = {
     about: "About Me",
     skills: "Skills",
-    work: "Work",
+    work: "Projects",
     contact: "Contact Me",
   }
 

@@ -13,7 +13,7 @@ export default function PortfolioSection() {
   }, [projectIndex]);
 
   return (
-    <div className=" flex flex-col items-center max-h-[400px] w-full gap-4 my-4">
+    <div className=" flex flex-col items-center min-h-[1000px] w-full gap-4 p-2 my-4 rounded-2xl bg-black/20">
       <h1 className="text-3xl text-center text-white">Recent Projects</h1>
       <div
         id="project-container"
