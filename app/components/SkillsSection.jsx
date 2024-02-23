@@ -17,8 +17,8 @@ import { MdOutlineRoute, MdDataObject, MdLockPerson } from "react-icons/md";
 
 export default function SkillsSection() {
   return (
-    <div className="container flex flex-col flex-wrap justify-around px-6 text-white">
-      <h1 className="text-center">Skills</h1>
+    <div className="container flex flex-col flex-wrap justify-around px-6 text-white rounded-2xl bg-black/20">
+      <h1 className="text-center text-3xl my-4">Skills</h1>
         {/* First Column */}
         <div className="flex flex-row flex-wrap">
         <div className="flex-1 text-center">

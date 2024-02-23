@@ -1,8 +1,9 @@
 "use client"
 import { useState, useEffect } from "react";
-import PortfolioSection from "../PortfolioSection";
 import PanelController from "./PanelController";
+import AboutMe from "../AboutSection/AboutMe"
 import SkillsSection from "../SkillsSection";
+import PortfolioSection from "../PortfolioSection";
 export default function ContentContainer() {
   const [activePanel, setActivePanel] = useState("about");
   useEffect(() => {
@@ -15,18 +16,8 @@ export default function ContentContainer() {
         activePanel={activePanel}
         setActivePanel={setActivePanel}
       />
-      <div className="flex flex-col">
-        <div className="bg-black/10 p-4 h-full rounded-xl">
-          <h2>About Me</h2>
-          <p>
-            I am a software engineer with a passion for creating and learning. I
-            have a background in computer science and have worked in a variety
-            of industries including healthcare, finance, and education. I am
-            currently working as a full stack developer at a startup in the
-            healthcare industry.
-          </p>
-          
-        </div>
+      <div className="flex flex-col gap-6 pt-1">
+        <AboutMe />
         <SkillsSection />
         <PortfolioSection />
       </div>
