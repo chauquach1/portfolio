@@ -47,7 +47,7 @@ export default function SkillsSection() {
       <div className="flex flex-row flex-wrap justify-around">
       {Object.keys(skills).map((skill, index) => {
         return (
-          <div className="flex flex-col gap-1 text-center">
+          <div key={`${skill}-section`} className="flex flex-col gap-1 text-center">
             <div className="border-b-1">
             <h1 className="text-xl">{skill}</h1>
             </div>
