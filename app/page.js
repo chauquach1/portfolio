@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import {Accordion, AccordionItem} from "@nextui-org/accordion";
 import IntroCard from "./components/IntroCard";
 import ContentContainer from "./components/ContentPanel/ContentContainer";
+import ContactMeSection from "./components/ContactMeSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="container flex flex-row items-center justify-center w-full">
         <ContentContainer />
       </div>
+      <ContactMeSection />
     </main>
   );
 }

@@ -1,3 +1,5 @@
+import ContactMeSection from "../ContactMeSection";
+
 export default function PanelController({activePanel, setActivePanel}) {
 
   const buttonText = {
@@ -13,7 +15,9 @@ export default function PanelController({activePanel, setActivePanel}) {
           <button
             key={index}
             className={`font-semibold hover:scale-125 transition-all ease-in-out rounded-lg ${
-              activePanel === panel ? "text-slate-600 scale-125" : "text-white  bg-transparent"
+              activePanel === panel
+                ? "text-slate-600 scale-125"
+                : "text-white  bg-transparent"
             }`}
             onClick={() => setActivePanel(panel)}
           >
@@ -21,22 +25,15 @@ export default function PanelController({activePanel, setActivePanel}) {
           </button>
         );
       })}
-      <h1
-        className={`hover:scale-90 transition-all ease-in-out rounded-lg ${
-          activePanel === "contact" ? "text-slate-600" : "text-white  bg-transparent"
-        }`}
-        onClick={() => setActivePanel("contact")}
-      >
-        Contact Me
-      </h1>
-      <h1
-        className={`hover:scale-90 transition-all ease-in-out rounded-lg ${
-          activePanel === "resume" ? "text-slate-600" : "text-white bg-transparent"
-        }`}
-        onClick={() => setActivePanel("resume")}
-      >
-        Resume
-      </h1>
+      <div className="border-t-1 py-2 w-full text-right">
+        <h1
+          className={
+            "hover:scale-95 active:scale-90 transition-all ease-in-out rounded-lg text-white bg-transparent"
+          }
+        >
+          Resume
+        </h1>
+      </div>
     </div>
   );
 }

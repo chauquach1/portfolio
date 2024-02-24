@@ -2,27 +2,37 @@ import { MdMail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { RxLinkedinLogo } from "react-icons/rx";
 
+const contactItems = {
+  email: {
+    href: "mailto:chauquach.dev@gmail.com",
+    icon: <MdMail />
+  },
+  linkedin: {
+    href: "https://www.linkedin.com/in/chauquach",
+    icon: <RxLinkedinLogo />
+  },
+  github: {
+    href: "https://github.com/chauquach1",
+    icon: <FaGithub />
+  }
+}
+
 export default function ContactMeSection() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row items-center gap-2">
-        <MdMail />
-        <a href="mailto:chauquach.dev@gmail.com">
-          <p>chauquach.dev@gmail.com</p>
-        </a>
-      </div>
-      <div className="flex flex-row items-center gap-2">
-        <FaGithub />
-        <a href="https://github.com/chauquach1">
-          <p>chauquach1</p>
-        </a>
-      </div>
-      <div className="flex flex-row items-center gap-2">
-        <RxLinkedinLogo />
-        <a href="https://www.linkedin.com/in/chauquach/">
-          <p>in/chauquach</p>
-        </a>
-      </div>
+    <div className="absolute right-7 top-7 flex flex-col text-3xl gap-2 text-right">
+      {Object.keys(contactItems).map((item, index) => {
+        return (
+          <a
+            key={index}
+            href={contactItems[item].href}
+            target="_blank"
+            className="flex flex-row justify-end items-center gap-2 hover:text-blue-300"
+          >
+            {contactItems[item].icon}
+          </a>
+        );
+      }
+      )}
     </div>
   );
 }

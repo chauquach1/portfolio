@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col items-center justify-center min-w-full">
-        <LoadIn />
+        {/* <LoadIn /> */}
         {/* <NavBar /> */}
         {children}
       </body>
