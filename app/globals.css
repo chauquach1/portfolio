@@ -16,16 +16,18 @@
   }
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--background-end-rgb));
   background: rgb(var(--foreground-rgb));
 }
 
-#intro {
-  background: rgb(204,230,181);
-  background: radial-gradient(circle, rgba(204,230,181,1) 21%, rgba(141,137,166,1) 100%);
+main {
+  /* background: rgb(204,230,181); */
+  background: radial-gradient(circle, rgba(204,230,181,.7) 21%, rgba(141,137,166,1) 100%);
 }
 
 .close-intro-effect {
