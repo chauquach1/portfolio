@@ -18,7 +18,6 @@ const funFacts = {
 
 export default function IntroCard() {
   return (
-    <>
       <div className="container flex flex-row self-center items-center justify-center sm:rounded-2xl w-full p-4 pb-10">
         <div className="flex flex-col">
           <h1 className={`${calistoga.className} text-2xl sm:text-8xl text-center text-white`}>
@@ -29,6 +28,5 @@ export default function IntroCard() {
           </h2>
         </div>
       </div>
-    </>
   );
 }

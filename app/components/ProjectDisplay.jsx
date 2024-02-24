@@ -15,7 +15,7 @@ export default function ProjectDisplay({ project }) {
   return (
     <div
       id="project-panel"
-      className="hidden sm:flex flex-col min-h-full bg-white/20 rounded-2xl p-6 overflow-clip"
+      className="hidden sm:flex flex-col bg-white/20 rounded-2xl p-6 mb-2"
     >
       <div id="project-links" className="flex flex-row justify-between">
         <h1 className="font-extrabold text-5xl">{title}</h1>

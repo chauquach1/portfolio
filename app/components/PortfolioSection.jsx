@@ -42,7 +42,7 @@ export default function PortfolioSection() {
             projectIndex={projectIndex}
           />
         </div>
-        <div id="project-display-container" className="container w-full min-h-[1000px]  overflow-scroll">
+        <div id="project-display-container" className="container w-full h-full">
           <ProjectDisplay project={project} />
         </div>
       </div>
