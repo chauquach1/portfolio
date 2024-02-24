@@ -19,7 +19,7 @@ const contactItems = {
 
 export default function ContactMeSection() {
   return (
-    <div className="absolute bottom-7 right-7 flex flex-col text-3xl gap-2 text-right">
+    <div className="absolute top-4 right-3 flex flex-col text-3xl gap-2 text-right">
       {Object.keys(contactItems).map((item, index) => {
         return (
           <a

@@ -13,7 +13,7 @@ export default function PortfolioSection() {
   }, [projectIndex]);
 
   return (
-    <div className=" flex flex-col items-center w-full gap-4 p-2 rounded-2xl ">
+    <div id="projects" className="relative flex flex-col items-center w-full gap-4 p-2 rounded-2xl ">
       <h1 className="text-3xl text-center text-white">Recent Projects</h1>
       <div
         id="project-container"
@@ -42,7 +42,7 @@ export default function PortfolioSection() {
             projectIndex={projectIndex}
           />
         </div>
-        <div id="project-display-container" className="container w-full h-full">
+        <div id="project-display-container" className="sticky top-0 container w-full">
           <ProjectDisplay project={project} />
         </div>
       </div>
