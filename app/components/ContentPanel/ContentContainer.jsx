@@ -17,7 +17,7 @@ export default function ContentContainer() {
         activePanel={activePanel}
         setActivePanel={setActivePanel}
       />
-      <div className="flex flex-col items-center w-full gap-6 pt-1">
+      <div className="relative flex flex-col items-center w-full gap-6 pt-6 px-2 h-full rounded-t-2xl">
         <AboutMe />
         <SkillsSection />
         <PortfolioSection />
