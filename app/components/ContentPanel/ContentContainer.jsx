@@ -7,9 +7,6 @@ import PortfolioSection from "../PortfolioSection";
 import ContactMeSection from "../ContactMeSection";
 export default function ContentContainer() {
   const [activePanel, setActivePanel] = useState("about");
-  useEffect(() => {
-    console.log(activePanel);
-  }, [activePanel]);
   
   return (
     <>

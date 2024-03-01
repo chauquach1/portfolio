@@ -28,13 +28,15 @@ export default function PanelController({activePanel, setActivePanel}) {
         );
       })}
       <div className="border-t-1 py-2 w-full text-right">
-        <h1
+        <a
+          href="/resume.pdf"
+          target="_blank"
           className={
             "hover:scale-95 active:scale-90 transition-all ease-in-out rounded-lg text-white bg-transparent"
           }
         >
           Resume
-        </h1>
+        </a>
       </div>
     </div>
   );
