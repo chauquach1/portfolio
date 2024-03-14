@@ -26,7 +26,7 @@ export default function ContactMeSection() {
             key={index}
             href={contactItems[item].href}
             target="_blank"
-            className="flex flex-row justify-end items-center gap-2 hover:text-blue-300"
+            className="flex flex-row justify-end items-center gap-2 text-white/50 hover:text-blue-300"
           >
             {contactItems[item].icon}
           </a>

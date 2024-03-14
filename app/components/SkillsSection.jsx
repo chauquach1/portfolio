@@ -42,7 +42,7 @@ const skills = {
 
 export default function SkillsSection() {
   return (
-    <div id="skills" className="container flex flex-col flex-wrap justify-around p-4 gap-6 text-white rounded-2xl bg-black/20">
+    <div id="skills" className="flex flex-col flex-wrap justify-around p-4 gap-6 text-white rounded-2xl bg-black/20">
       <h1 className="text-center text-3xl">Skills</h1>
       <div className="flex flex-row flex-wrap justify-around">
       {Object.keys(skills).map((skill, index) => {

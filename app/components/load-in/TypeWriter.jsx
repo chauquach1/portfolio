@@ -9,7 +9,7 @@ export default function TypeWriter({text, speed, closeLoadIn, setCloseLoadIn}) {
   useEffect(() => {
     setTimeout(() => {
       setStartType(true);
-    }, 300);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -20,15 +20,15 @@ export default function TypeWriter({text, speed, closeLoadIn, setCloseLoadIn}) {
       }, speed);
     }
 
-    if (index === text.length) {
-      setTimeout(() => {
-        setCloseLoadIn(true);
-      }, 1200);
-    }
+    // if (index === text.length) {
+    //   setTimeout(() => {
+    //     setCloseLoadIn(true);
+    //   }, 100);
+    // }
   }, [startType, index]);
 
 
   return (
-      <h1 className="my-auto text-center text-white">{displayText}</h1>
-  )
+      <div className="typed-out"></div>
+  );
 }
