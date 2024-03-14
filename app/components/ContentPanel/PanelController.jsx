@@ -10,7 +10,7 @@ export default function PanelController({activePanel, setActivePanel}) {
   }
 
   return (
-    <div className="sticky top-0 hidden lg:flex flex-col self-start items-end min-w-fit py-6 mx-6 gap-2 font-thin">
+    <div className="fixed left-0 top-0 hidden lg:flex flex-col self-start items-end min-w-fit py-6 mx-6 gap-2 font-thin">
       {Object.keys(buttonText).map((panel, index) => {
         return (
           <a
@@ -18,7 +18,7 @@ export default function PanelController({activePanel, setActivePanel}) {
             href={`#${panel}`}
             className={`font-semibold hover:scale-125 transition-all ease-in-out rounded-lg ${
               activePanel === panel
-                ? "text-slate-600 scale-125"
+                ? "text-slate-600/90 fill-white stroke-slate-100 scale-125"
                 : "text-white  bg-transparent"
             }`}
             onClick={() => setActivePanel(panel)}
