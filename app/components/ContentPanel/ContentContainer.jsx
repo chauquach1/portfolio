@@ -1,26 +1,20 @@
 "use client"
 import { useState, useEffect } from "react";
-import PanelController from "./PanelController";
 import AboutMe from "../AboutSection/AboutMe"
 import SkillsSection from "../SkillsSection";
 import PortfolioSection from "../PortfolioSection";
 import ContactMeSection from "../ContactMeSection";
 export default function ContentContainer() {
   const [activePanel, setActivePanel] = useState("about");
-  useEffect(() => {
-    console.log(activePanel);
-  }, [activePanel]);
   
   return (
     <>
-      <PanelController
-        activePanel={activePanel}
-        setActivePanel={setActivePanel}
-      />
-      <div className="relative flex flex-col items-center w-full gap-6 pt-6 px-2 h-full rounded-t-2xl">
+      <div className="z-40 bg-black min-h-screen flex flex-row items-center overflow-hidden justify-start w-full rounded-t-2xl pt-9 px-2">
         <AboutMe />
-        <SkillsSection />
-        <PortfolioSection />
+        <div className="h-full flex flex-col">
+          <SkillsSection />
+          <PortfolioSection />
+        </div>
       </div>
     </>
   );
