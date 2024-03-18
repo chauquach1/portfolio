@@ -19,20 +19,21 @@ const contactItems = {
 
 export default function ContactMeSection() {
   return (
-    <div className="absolute top-4 right-3 flex flex-col text-3xl gap-2 text-right">
-      {Object.keys(contactItems).map((item, index) => {
-        return (
-          <a
-            key={index}
-            href={contactItems[item].href}
-            target="_blank"
-            className="flex flex-row justify-end items-center gap-2 text-white/50 hover:text-blue-300"
-          >
-            {contactItems[item].icon}
-          </a>
-        );
-      }
-      )}
+    <div className="z-50 fixed top-0 w-full">
+      <div className="absolute top-4 right-3 flex flex-col text-3xl gap-2 text-right">
+        {Object.keys(contactItems).map((item, index) => {
+          return (
+            <a
+              key={index}
+              href={contactItems[item].href}
+              target="_blank"
+              className="flex flex-row justify-end items-center gap-2 text-white/50 hover:text-blue-300"
+            >
+              {contactItems[item].icon}
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -36,6 +36,13 @@
   }
 }
 
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #1300ff;
+}
+
 .typed-out{
   overflow: hidden;
   white-space: nowrap;
@@ -70,4 +77,28 @@ main {
 
 .close-intro-effect {
   transition: transform var(--transition-duration, 1s) ease-in-out, opacity var(--transition-duration, 1s) ease-in-out;
+}
+
+
+.progress-wheel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-90deg);
+}
+
+.progress-wheel circle {
+  stroke-dashoffset: 0;
+  stroke-width: 30%;
+  fill: none;
+}
+
+.progress-wheel .bg {
+  stroke: var(--accent);
+  opacity: 0.2;
+}
+
+.progress-wheel .progress {
+  stroke: var(--accent);
+  stroke-dasharray: 0, 1;
 }

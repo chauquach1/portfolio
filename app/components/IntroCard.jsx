@@ -1,11 +1,8 @@
-// import {Image} from "@nextui-org/react"
-import Image from "next/image";
-import profile from "../../public/profile.png";
-import SkillsSection from "./SkillsSection";
+"use client";
 import { Calistoga } from "next/font/google";
-import TypeWriter from "./load-in/TypeWriter";
 
-import selfie from "../../public/selfie.jpeg";
+import { motion } from "framer-motion"
+import { useRef } from "react";
 
 const calistoga = Calistoga({
   subsets: ["latin"],
@@ -20,29 +17,50 @@ const funFacts = {
 };
 
 export default function IntroCard2() {
+
+
   return (
-    <div
-      id="home"
-      className="sticky flex flex-col self-center items-center justify-center mt-auto min-h-screen w-full gap-2"
-    >
-      <div className="fixed z-10  flex flex-col items-center justify-center gap-2">
-        {/* NAME */}
+    < >
+      <motion.div
+        id="intro-card"
+        initial={{ opacity: 0.75, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className=" bg-white/20 flex flex-col items-center justify-center h-screen gap-2"
+      >
         <div
-          className={`${calistoga.className} w-max transition delay-0 ease-in duration-100 inline-flex justify-center text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-start my-auto scale-100 opacity-0 text-white`}
-          style={{
-            animation: "scaleIn 1.3s ease-in-out 0.2s forwards",
-          }}
+          className={`${calistoga.className} fixed inline-flex justify-center text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-start text-white`}
         >
           &lt;
-          <div className="typed-out">
+          <motion.div
+            initial={{ opacity: 0.5, width: 0 }}
+            animate={{ opacity: 1, width: "100%" }}
+            transition={{
+              duration: 2,
+              delay: 1,
+              type: "spring",
+              stiffness: 9,
+            }}
+            className="overflow-hidden whitespace-nowrap"
+          >
             Chau Quach
-            <div className="w-full relative text-end font-normal text-sm">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 3,
+                type: "spring",
+                bounce: 0.4,
+              }}
+              className="w-full  text-end font-normal text-sm pe-2"
+            >
               Fullstack Developer
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           /&gt;
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </>
   );
 }
