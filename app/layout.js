@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body
         style={{ backgroundImage: `url(${painting.src})`, objectFit: "fill"}}
       >
-        {/* <LoadIn /> */}
+        <LoadIn />
         {/* <NavBar /> */}
         {children}
       </body>
