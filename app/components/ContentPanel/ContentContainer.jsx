@@ -32,13 +32,6 @@ export default function ContentContainer() {
     setZIndex("z-30");
   }, 3000);
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    // if (latest === 1) {
-    //   setZIndex("z-30");
-    // }
-    console.log(latest);
-  });
-
   
   return (
     <section className="block h-screen min-h-fit w-full bg-transparent">
@@ -50,6 +43,7 @@ export default function ContentContainer() {
       >
         <div className="h-[200px]"></div>
         <AboutMe />
+        <div className="h-[200px]"></div>
         <SkillsSection />
         <div className="h-[200px]"></div>
         <PortfolioSection />
