@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        style={{ backgroundImage: `url(${painting.src})`, objectFit: "fill"}}
+        style={{ backgroundImage: `url(${painting.src})`, backgroundSize: "cover", backgroundAttachment: "fixed"}}
       >
         <LoadIn />
         {/* <NavBar /> */}

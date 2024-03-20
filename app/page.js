@@ -6,10 +6,9 @@ import ContactMeSection from "./components/ContactMeSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full overflow-auto items-center justify-start">
+    <main className="bg-transparent flex flex-col w-full overflow-auto items-center justify-start">
       <IntroCard />
       <ContentContainer />
-      <ContactMeSection />
     </main>
   );
 }

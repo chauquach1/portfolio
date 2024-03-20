@@ -11,41 +11,49 @@ export default function ContentContainer() {
   const targetRef = useRef(null);
 
   // ANIMATION POSITION START
-  const startX = 0.35
-  const startY = 0.5
+  const startX = 0.05
+  const startY = 0
 
   // ANIMATION POSITION END
-  const endX = 0.4
-  const endY = 0.2
+  const endX = 0.1
+  const endY = 0.1
 
   // NUMERICAL VALUE FOR SCROLL PROGRESS
   const { scrollYProgress } = useScroll({
+    // offset: ["start 0.5", "center start"],
     offset: [`${startX}, ${startY}`, `${endX}, ${endY}`],
   });
 
   // SCALE X ANIMATION
   const scaleX = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const xSmooth = useSpring(scaleX, { damping: 40, stiffness: 300 });
+  const xSmooth = useSpring(scaleX, { damping: 40, stiffness: 1000 });
 
   setTimeout(() => {
     setZIndex("z-30");
   }, 3000);
 
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    // if (latest === 1) {
+    //   setZIndex("z-30");
+    // }
+    console.log(latest);
+  });
+
   
   return (
-    <>
+    <section className="block h-screen min-h-fit w-full bg-transparent">
       <motion.div
         ref={targetRef}
-        className={`${zIndex} bg-black min-h-screen w-full max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px] pt-9 px-2`}
-        style={{scaleX: xSmooth} } 
-        transition={{ type: 'spring', damping: 300 }}
+        className={`${zIndex} absolute me-auto bg-black overflow-x-hidden min-h-fit w-full max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px] pt-9 px-2`}
+        style={{ scaleX: xSmooth }}
+        transition={{ type: "spring", damping: 300 }}
       >
+        <div className="h-[200px]"></div>
         <AboutMe />
-        {/* <div className="h-full flex flex-col"> */}
-          <SkillsSection />
-          <PortfolioSection />
-        {/* </div> */}
+        <SkillsSection />
+        <div className="h-[200px]"></div>
+        <PortfolioSection />
       </motion.div>
-    </>
+    </section>
   );
 }

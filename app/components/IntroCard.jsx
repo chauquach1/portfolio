@@ -76,7 +76,7 @@ export default function IntroCard() {
         ease: "linear",
         repeat: Infinity,
         repeatType: "mirror",
-        repeatDelay: 1.5,
+        repeatDelay: 1.2,
       },
     },
   };
@@ -84,7 +84,7 @@ export default function IntroCard() {
 
 
   return (
-    <div className="flex flex-col h-screen justify-center items-center">
+    <section className="flex flex-col h-screen justify-center items-center">
       <motion.div
         id="intro-card"
         initial={{ opacity: 0.75, scale: 0.5 }}
@@ -119,6 +119,6 @@ export default function IntroCard() {
           {caption}
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 }
