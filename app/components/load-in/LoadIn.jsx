@@ -1,7 +1,4 @@
 "use client"
-import TypeWriter from "./TypeWriter"
-import {useState, useEffect, use} from "react";
-import IntroCard from "../IntroCard";
 import { motion } from "framer-motion"
 
 export default function LoadIn() {

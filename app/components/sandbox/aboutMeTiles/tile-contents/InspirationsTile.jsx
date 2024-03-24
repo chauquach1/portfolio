@@ -1,8 +1,8 @@
-export default function Hobbies({revealContent}) {
-  const hobbies = ["Snowboarding", "Tech Meetups", "Music Festivals", "Video Games"]
+export default function InspirationsTile({revealContent}) {
+  const hobbies = ["KAWS", "Tech Meetups", "Music Festivals", "Video Games", "Anime"]
 
   return (
-    <div className={revealContent ? "flex flex-col items-start justify-center h-auto w-full mt-3" : "hidden"}>
+    <div className={revealContent ? "flex flex-grow flex-col items-start justify-center h-auto w-full mt-3" : "hidden"}>
       {hobbies.map((hobby, index) => (
         <div
           key={index}

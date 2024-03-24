@@ -1,12 +1,8 @@
 "use client";
 import { useState, useEffect, useRef, use } from "react";
-import AboutMe from "../AboutSection/AboutMe";
-import SkillsSection from "../SkillsSection";
-import PortfolioSection from "../PortfolioSection";
-import ContactMeSection from "../ContactMeSection";
-import { motion, useScroll, useVelocity, useMotionValueEvent, useTransform, cubicBezier, useSpring, useMotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-export default function ContentContainer() {
+export default function ContentContainer({children}) {
   const [zIndex, setZIndex] = useState("z-0");
   const targetRef = useRef(null);
 
@@ -41,12 +37,7 @@ export default function ContentContainer() {
         style={{ scaleX: xSmooth }}
         transition={{ type: "spring", damping: 300 }}
       >
-        <div className="h-[200px]"></div>
-        <AboutMe />
-        <div className="h-[200px]"></div>
-        <SkillsSection />
-        <div className="h-[200px]"></div>
-        <PortfolioSection />
+        {children}
       </motion.div>
     </section>
   );

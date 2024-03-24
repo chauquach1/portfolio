@@ -26,7 +26,7 @@ const funFacts = {
   pets: "Magnus",
 };
 
-export default function IntroCard() {
+export default function HeroSection() {
   const [caption, setCaption] = useState("PASSIONATE SOFTWARE ENGINEER");
   const [currentIndex, setCurrentIndex] = useState(0); // New state to track the current index
   const [scope, animate] = useAnimate();

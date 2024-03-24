@@ -1,6 +1,6 @@
 "use client";
-import ProjectCard from "./ProjectCard";
-import ProjectDisplay from "./ProjectDisplay";
+import ProjectCard from "../components/portfolioComponents/ProjectCard";
+import ProjectDisplay from "../components/portfolioComponents/ProjectDisplay";
 import { useState, useEffect } from "react";
 import projectDescriptions from "../libs/projectDescriptions";
 
