@@ -1,4 +1,4 @@
-import ContactMeSection from "../ContactMeSection";
+import ContactMeSection from "../../sections/ContactMeSection";
 
 export default function PanelController({activePanel, setActivePanel}) {
 

@@ -1,27 +1,13 @@
 "use client"
-import TypeWriter from "./TypeWriter"
-import {useState, useEffect, use} from "react";
+import { motion } from "framer-motion"
 
 export default function LoadIn() {
-  const [closeLoadIn, setCloseLoadIn] = useState(false);
-
-  const style = {
-    '--transition-duration': closeLoadIn ? '0.5s' : '0s', // Update duration based on state
-  };
-
   return (
-    <div
-      className={`close-intro-effect fixed flex flex-col min-h-screen w-full z-50 bg-slate-900 top-0 ease-in-out ${
-        closeLoadIn ? "-translate-y-full opacity-0" : ""
-      }`}
-      style={style}
+    <motion.div
+      className={`fixed flex flex-col min-h-dvh w-full z-20 bg-gray-950`}
+      animate={{ opacity: "0"}}
+      transition={{ duration: 1, delay: 3}}
     >
-      <TypeWriter
-        text="Hi there friend!"
-        speed={80}
-        closeLoadIn={closeLoadIn}
-        setCloseLoadIn={setCloseLoadIn}
-      />
-    </div>
+    </motion.div>
   );
 }

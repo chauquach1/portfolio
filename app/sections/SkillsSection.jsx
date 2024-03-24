@@ -42,32 +42,38 @@ const skills = {
 
 export default function SkillsSection() {
   return (
-    <div id="skills" className="flex flex-col flex-wrap justify-around p-4 gap-6 text-white rounded-2xl bg-black/20">
+    <section
+      id="skills"
+      className="w-full flex flex-col flex-wrap justify-around p-4 gap-6 text-white rounded-2xl bg-white/20"
+    >
       <h1 className="text-center text-3xl">Skills</h1>
       <div className="flex flex-row flex-wrap justify-around">
-      {Object.keys(skills).map((skill, index) => {
-        return (
-          <div key={`${skill}-section`} className="flex flex-col gap-1 text-center">
-            <div className="border-b-1">
-            <h1 className="text-xl">{skill}</h1>
+        {Object.keys(skills).map((skill, index) => {
+          return (
+            <div
+              key={`${skill}-section`}
+              className="flex flex-col gap-1 text-center"
+            >
+              <div className="border-b-1">
+                <h1 className="text-xl">{skill}</h1>
+              </div>
+              <ul className="">
+                {skills[skill].map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="flex flex-row items-center gap-1 bg-transparent"
+                    >
+                      {item.icon}
+                      {item.name}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
-            <ul className="">
-              {skills[skill].map((item, index) => {
-                return (
-                  <li
-                    key={index}
-                    className="flex flex-row items-center gap-1 bg-transparent"
-                  >
-                    {item.icon}
-                    {item.name}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        );
-      })}
-</div>
-    </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }

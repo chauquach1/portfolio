@@ -1,6 +1,5 @@
 import "./globals.css";
 import LoadIn from "./components/load-in/LoadIn";
-import Image from "next/image";
 export const metadata = {
   title: "Chau Quach Dev",
   description: "Hi there!",
@@ -12,10 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        style={{ backgroundImage: `url(${painting.src})`, objectFit: "fill"}}
+        style={{ backgroundImage: `url(${painting.src})`, backgroundSize: "cover", backgroundAttachment: "fixed"}}
       >
         {/* <LoadIn /> */}
-        {/* <NavBar /> */}
         {children}
       </body>
     </html>
