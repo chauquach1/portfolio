@@ -1,5 +1,5 @@
 "use client";
-import Tile from "./Tile";
+import Card from "./aboutMeCard";
 import NicknamesTile from "./tile-contents/NicknamesTile";
 import HobbiesTile from "./tile-contents/HobbiesTile";
 import InspirationsTile from "./tile-contents/InspirationsTile";
@@ -66,9 +66,9 @@ export default function TileCollection() {
   ];
 
   return (
-    <div className="flex flex-row flex-wrap items-start justify-around max-h-1/2 w-full">
+    <div className="flex flex-row flex-wrap items-start overflow-hidden justify-around max-h-1/2 w-full">
       {tiles.map((tile, index) => (
-        <Tile
+        <Card
           key={index}
           color={tile.color}
           width={tile.width}
