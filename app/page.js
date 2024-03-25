@@ -9,12 +9,16 @@ export default function Home() {
     <main className="bg-transparent flex flex-col w-full overflow-auto items-center justify-start">
       <HeroSection />
       <ContentContainer>
+
         <div className="h-[200px]"></div>
         <AboutMeSection />
+
         <div className="h-[200px]"></div>
         <SkillsSection />
+        
         <div className="h-[200px]"></div>
         <PortfolioSection />
+        
       </ContentContainer>
     </main>
   );
