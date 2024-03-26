@@ -9,28 +9,28 @@ export default function AboutMeCard({
   currIndex,
   carouselRef,
   cardsContainerRef,
-  scrollXProgress,
-  scrollX
+  // scrollXProgress,
+  // scrollX
 }) {
 
 
-  // const { scrollX } = useScroll({
-  //   container: cardsContainerRef
-  // });
+  const { scrollX } = useScroll({
+    container: cardsContainerRef
+  });
 
-  // useMotionValueEvent(scrollX, "change", (latest) => {
-  //   console.log("Page scrollX: ", latest);
-  // });
+  useMotionValueEvent(scrollX, "change", (latest) => {
+    console.log("Page scrollX: ", latest);
+  });
 
-  // const { scrollXProgress } = useScroll({
-  //   container: cardsContainerRef,
-  //   axis: "x",
-  //   offset: ["start end", "end end"]
-  // })
+  const { scrollXProgress } = useScroll({
+    container: carouselRef,
+    axis: "x",
+    offset: ["start end", "end end"]
+  })
 
-  // useMotionValueEvent(scrollXProgress, "change", (latest) => {
-  //   console.log("Page scrollXProgress: ", latest);
-  // });
+  useMotionValueEvent(scrollXProgress, "change", (latest) => {
+    console.log("Page scrollXProgress: ", latest);
+  });
 
   // const handleClick = () => {
   //   setActiveCard(currIndex)
@@ -53,10 +53,15 @@ export default function AboutMeCard({
   return (
     <div
       className={`bg-${color} text-center h-full min-w-[320px] shadow-lg rounded-2xl`}
-      // style={{ opacity: scrollXProgress }}
+      style={{ opacity: scrollXProgress }}
       onClick={() => handleClick()}
     >
-      <h2 className="text-3xl text-white/30" style={{ opacity: scrollXProgress }}>{label}</h2>
+      <h2
+        className="text-3xl text-white" 
+        style={{ opacity: scrollXProgress }}
+      >
+        {label}
+      </h2>
     </div>
   );
 }

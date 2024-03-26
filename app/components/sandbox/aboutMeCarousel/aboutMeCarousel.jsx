@@ -96,23 +96,23 @@ export default function TileCollection() {
   const [activeCard, setActiveCard] = useState(3);
 
 
-  const { scrollX } = useScroll({
-    container: cardsContainerRef
-  });
+  // const { scrollX } = useScroll({
+  //   container: cardsContainerRef
+  // });
 
-  useMotionValueEvent(scrollX, "change", (latest) => {
-    console.log("Page scrollX: ", latest);
-  });
+  // useMotionValueEvent(scrollX, "change", (latest) => {
+  //   console.log("Page scrollX: ", latest);
+  // });
 
-  const { scrollXProgress } = useScroll({
-    container: cardsContainerRef,
-    axis: "x",
-    offset: ["start end", "center", "end end"]
-  })
+  // const { scrollXProgress } = useScroll({
+  //   container: cardsContainerRef,
+  //   axis: "x",
+  //   offset: ["start end", "center", "end end"]
+  // })
 
-  useMotionValueEvent(scrollXProgress, "change", (latest) => {
-    console.log("Page scrollXProgress: ", latest);
-  });
+  // useMotionValueEvent(scrollXProgress, "change", (latest) => {
+  //   console.log("Page scrollXProgress: ", latest);
+  // });
 
 
   const handleClick = () => {
@@ -165,24 +165,24 @@ export default function TileCollection() {
             color={"gray-500"}
             label={"Inspirations"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
           <Card
             carouselRef={carouselRef}
             color={"red-500"}
             label={"Nicknames"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
           <Card
             carouselRef={carouselRef}
             color={"pink-500"}
             label={"Travel"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
           <Card
             cardsContainerRef={cardsContainerRef}
@@ -190,32 +190,32 @@ export default function TileCollection() {
             color={"teal-700"}
             label={"Hobbies"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
           <Card
             carouselRef={carouselRef}
             color={"blue-500"}
             label={"Pets"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
           <Card
             carouselRef={carouselRef}
             color={"purple-500"}
             label={"Music"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
           <Card
             carouselRef={carouselRef}
             color={"orange-500"}
             label={"Zodiacs"}
             setActiveCard={setActiveCard}
-            scrollXProgress={scrollXProgress}
-            scrollX={scrollX}
+            // scrollXProgress={scrollXProgress}
+            // scrollX={scrollX}
           />
       </motion.div>
     </motion.div>

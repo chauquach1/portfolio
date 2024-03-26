@@ -1,5 +1,4 @@
 import { Divider } from "@nextui-org/react";
-import Carousel from "../components/sandbox/aboutMeCarousel/aboutMeCarousel";
 import AboutMeAccordion from "../components/sandbox/aboutMeAccordion/AboutMeAccordion";
 
 const description =
@@ -25,8 +24,6 @@ export default function AboutMe() {
           <br />
         </div>
       </div>
-      <Divider orientation="horizontal" className="rounded-sm  h-4 my-4" />
-      <Carousel />
     </section>
   );
 }
