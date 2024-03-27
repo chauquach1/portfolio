@@ -102,7 +102,7 @@ export default function HeroSection() {
             initial="hidden"
             animate="visible"
             // style={}
-            className="text-center overflow-x-hidden min-h-[100px] whitespace-nowrap"
+            className="text-center overflow-hidden min-h-[100px] whitespace-nowrap"
           >
             Chau Quach
           </motion.div>

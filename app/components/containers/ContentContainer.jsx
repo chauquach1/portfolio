@@ -33,7 +33,7 @@ export default function ContentContainer({children}) {
     <section className="block h-screen min-h-fit w-full bg-transparent">
       <motion.div
         ref={targetRef}
-        className={`${zIndex} absolute me-auto bg-black overflow-x-hidden min-h-fit w-full max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px] pt-9 px-2`}
+        className={`${zIndex} absolute me-auto bg-black overflow-x-hidden min-h-max w-full max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px] pt-9`}
         style={{ scaleX: xSmooth }}
         transition={{ type: "spring", damping: 300 }}
       >
