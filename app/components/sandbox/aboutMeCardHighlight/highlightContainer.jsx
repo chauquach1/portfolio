@@ -1,5 +1,5 @@
 "use client";
-import Card from "./aboutMeCard";
+import Card from "./highlightCard";
 // import NicknamesTile from "./tile-contents/NicknamesTile";
 // import HobbiesTile from "./tile-contents/HobbiesTile";
 // import InspirationsTile from "./tile-contents/InspirationsTile";
@@ -130,10 +130,10 @@ export default function TileCollection() {
 
   return (
     <motion.div id="carousel" layout ref={carouselRef} 
-      className="flex flex-row overflow-x-scroll self-center justify-center h-[400px] sm:h-[380px] w-full "
+      className="flex flex-row overflow-x-scroll self-start justify-start h-[400px] sm:h-[380px] w-full bg-white/30"
     >
       <motion.div id="cardsContainer" ref={cardsContainerRef}  
-        className="flex flex-row min-w-full items-center overflow-x-scroll bg-black/20 mx-auto text-center justify-start"
+        className="flex flex-row min-w-[200%] items-center bg-black/20 text-center justify-start"
       >
         {items.map((tile, index) => (
           <Card

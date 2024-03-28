@@ -8,6 +8,7 @@ export default function AboutMeCard({
   label,
   currIndex,
   cardsContainerRef,
+  carouselRef,
   index,
   id,
   // scaleX
@@ -40,20 +41,28 @@ export default function AboutMeCard({
   const cardRef = useRef(`${label}-${index}`);
 
   const { scrollX } = useScroll({
-    container: cardsContainerRef,
+    container: carouselRef,
     target: cardRef,
     layoutEffect: false,
     axis: "x",
-    offset: ["start end", "end end"]
+    offset: ["start end", "start start"]
   });
 
   const { scrollXProgress } = useScroll({
-    container: cardsContainerRef,
+    container: carouselRef,
     target: cardRef,
     layoutEffect: false,
     axis: "x",
-    offset: ["start end", "end start"]
+    offset: ["center center", "start start"]
   });
+
+  // useMotionValueEvent(scrollX, "change", (latest) => {
+  //   console.log('scrollX: ', cardRef.current.id , latest);
+  // });
+
+  // useMotionValueEvent(scrollXProgress, "change", (latest) => {
+  //   console.log('scrollXProgress: ',cardRef.current.id ,  latest);
+  // });
 
   const scale = useTransform(
     scrollXProgress,
@@ -65,9 +74,9 @@ export default function AboutMeCard({
     scrollXProgress,
     // [0, 0.15, 0.25, 0.45, 0.5, 0.55, 0.75, 0.85, 1],
     // [-320, -200, -140, -28, 0, 28, 140, 200, 320]
-    [0, 0.5, 1],
-    ["-100%", "0%","100%"]
-  );
+    [0, 1],
+    ["200%", "0%"]
+    );
 
   const zIndex = useTransform(
     scrollXProgress,
@@ -110,12 +119,15 @@ export default function AboutMeCard({
     console.log("click", cardRef.current.clientWidth);
   }
 
+  let left = `${index} * 2.2rem`
+
   return (
     <motion.div
       id={id}
       ref={cardRef}
-      className={`bg-${color} text-center min-h-full min-w-[240px] sm:min-w-[300px] shadow-lg rounded-2xl`}
-      style={{ scale, translateX, zIndex, filter }}
+      className={`bg-${color} sticky text-center min-h-full min-w-[240px] sm:min-w-[300px] shadow-lg rounded-2xl`}
+      // style={{ scale, translateX, zIndex }}
+      // style={{ translateX}}
       // filter: blur(`${blurAmount}px`)
       onClick={() => handleClick()}
     >

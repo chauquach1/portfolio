@@ -46,7 +46,7 @@ export default function SkillsSection() {
       id="skills"
       className="w-full flex flex-col flex-wrap justify-around h-full my-4 p-4 gap-6 text-white rounded-2xl bg-white/20"
     >
-      <h1 className="text-center text-3xl">Skills</h1>
+      <h1 className="text-center text-3xl">Tools</h1>
       <div className="flex flex-row flex-wrap justify-around">
         {Object.keys(skills).map((skill, index) => {
           return (
