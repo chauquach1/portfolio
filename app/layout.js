@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        style={{ backgroundImage: `url(${painting.src})`, backgroundSize: "cover", backgroundAttachment: "fixed"}}
+        className="bg-[#DEDFD9]"
       >
         {/* <LoadIn /> */}
         {children}

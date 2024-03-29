@@ -4,7 +4,7 @@ import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
 
 export default function AboutMeAccordion() {
   return (
-    <div className="w-full">
+    <div className="container flex flex-col my-auto self-start w-full">
     <Accordion
       className="flex flex-col gap-9 justify-start flex-grow w-full text-white "
       base="text-white"

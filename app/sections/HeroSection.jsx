@@ -1,5 +1,6 @@
 "use client";
 import { Calistoga } from "next/font/google";
+import painting from "../../public/painting.jpeg";
 
 import {
   motion,
@@ -84,17 +85,24 @@ export default function HeroSection() {
 
 
   return (
-    <section className="flex flex-col h-screen justify-center items-center">
+    <section
+      className="flex flex-col h-screen justify-center  text-black/70 items-center "
+      // style={{
+      //   backgroundImage: `url(${painting.src})`,
+      //   backgroundSize: "cover",
+      //   backgroundAttachment: "fixed",
+      // }}
+    >
       <motion.div
         id="intro-card"
         initial={{ opacity: 0.75, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="z-30 fixed top-[37%] flex min-h-max flex-col items-center justify-center gap-2"
+        className="fixed top-[37%] flex min-h-max flex-col items-center justify-center gap-2"
       >
         <div
           ref={scope}
-          className={`${calistoga.className} inline-flex justify-center text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-start text-white`}
+          className={`${calistoga.className} inline-flex justify-center text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-start `}
         >
           {"<"}
           <motion.div
@@ -114,7 +122,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           style={{ opacity }}
-          className=" w-full text-center font-bold min-h-[80px] text-2xl pe-2"
+          className=" w-full text-center font-bold min-h-[80px] text-2xl pe-2 text-black/40"
         >
           {caption}
         </motion.div>

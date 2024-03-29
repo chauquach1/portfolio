@@ -50,17 +50,14 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="w-full flex flex-row flex-wrap lg:flex-nowrap justify-start h-screen my-4 p-4 gap-6 text-white rounded-2xl "
+      className="relative z-10 w-full bg-zinc-950 flex flex-row flex-wrap lg:flex-nowrap justify-center items-center h-screen p-4 gap-6 text-white "
     >
-      <div className=" h-4 lg:h-full w-1/3">
-        <h1 className="text-center text-3xl">Tools</h1>
-      </div>
-
-      <div className="grid grid-cols-12 grid-rows-4 h-3/4 w-3/4 justify-center rounded-3xl">
+      <div className="container grid grid-cols-12 grid-rows-4 h-3/4 w-full justify-center rounded-3xl">
         <div className="col-span-full row-span-2 justify-center rounded-3xl bg-slate-900 items-center rounded-br-none"></div>
-        <div className="col-span-3 row-span-2 justify-start bg-transparent items-center ">
-          <div className="rounded-3xl rounded-tr-none bg-slate-900 items-center w-full h-full ">
-            <div className="h-full w-full rounded-tr-3xl bg-black pr-2 pt-2">
+        <div className="col-span-3 row-span-2 justify-start bg-white/20 items-center ">
+          <div className="rounded-3xl rounded-tr-none bg-slate-900  items-center w-full h-full ">
+            {/* Small Compartment container */}
+            <div className="h-full w-full rounded-tr-3xl bg-zinc-950  pr-2 pt-2">
               {/* Small Compartment */}
               <div className="h-full w-full text-center rounded-3xl bg-red-400/20 p-1">
                 <h1>Small Compartment</h1>
