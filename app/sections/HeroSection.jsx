@@ -30,7 +30,6 @@ const funFacts = {
 export default function HeroSection() {
   const [caption, setCaption] = useState("PASSIONATE SOFTWARE ENGINEER");
   const [currentIndex, setCurrentIndex] = useState(0); // New state to track the current index
-  const [scope, animate] = useAnimate();
   const phrases = [
     "PASSIONATE SOFTWARE ENGINEER",
     "CREATIVE FRONT END DEVELOPER",
@@ -52,7 +51,7 @@ export default function HeroSection() {
   });
 
   const nameVariants = {
-    hidden: { opacity: 0.5, width: 0 },
+    hidden: { opacity: 0, width: 0},
     visible: {
       opacity: 1,
       width: "100%",
@@ -87,35 +86,29 @@ export default function HeroSection() {
   return (
     <section
       className="flex flex-col h-screen justify-center  text-black/70 items-center "
-      // style={{
-      //   backgroundImage: `url(${painting.src})`,
-      //   backgroundSize: "cover",
-      //   backgroundAttachment: "fixed",
-      // }}
     >
       <motion.div
         id="intro-card"
-        initial={{ opacity: 0.75, scale: 0.5 }}
+        initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="fixed top-[37%] flex min-h-max flex-col items-center justify-center gap-2"
+        className="fixed top-[37%] flex min-h-max flex-col items-center justify-center"
       >
-        <div
-          ref={scope}
-          className={`${calistoga.className} inline-flex justify-center text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-start `}
+        <motion.div
+          id="intro-name-container"
+          className={`font-semibold italic overflow-x-hidden inline-flex justify-center text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-start `}
         >
-          {"<"}
-          <motion.div
-            variants={nameVariants}
-            initial="hidden"
-            animate="visible"
-            // style={}
-            className="text-center overflow-hidden min-h-[100px] whitespace-nowrap"
-          >
-            Chau Quach
-          </motion.div>
-          {"/>"}
-        </div>
+          <span className="">{"<"}</span>
+            <motion.h1
+              variants={nameVariants}
+              initial="hidden"
+              animate="visible"
+              className=" text-start overflow-x-hidden min-h-[100px] whitespace-pre"
+            >
+              {" Chau Quach "}
+            </motion.h1>
+          <span className="">{"/>"}</span>
+        </motion.div>
         <motion.div
           id="intro-caption"
           variants={captionVariants}

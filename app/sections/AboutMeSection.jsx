@@ -1,11 +1,7 @@
 "use client";
-import { Divider, Image } from "@nextui-org/react";
-import NextImage from "next/image";
 import AboutMeAccordion from "../components/sandbox/aboutMeAccordion/AboutMeAccordion";
 import { useState, useEffect, useRef, use } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import snowboardingSelfie from "../../public/snowboarding-selfie.jpeg";
-
 import WhoIAmBlock from "../blocks/whoIAm";
 
 export default function AboutMe() {
@@ -38,22 +34,21 @@ export default function AboutMe() {
   return (
     <motion.section
       ref={targetRef}
-      className={`${zIndex} relative me-auto bg-zinc-950 overflow-x-hidden min-h-max min-w-screen max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px] gap-[100px]`}
+      className={`${zIndex} relative me-auto bg-zinc-950 overflow-x-hidden min-h-max min-w-screen max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px]`}
       style={{ scaleX: xSmooth }}
       transition={{ type: "spring", damping: 300 }}
     >
       {/* banner */}
-      <div className="flex flex-row h-[200px] w-full text-start justify-start border-b-1 overflow-x-hidden">
+      <div className="flex flex-row h-[200px] w-full text-start justify-start overflow-x-hidden">
         <div className="flex flex-row items-center text-3xl text-center text-white/30">
           <h1 className="my-auto min-w-screen text-slate-500"></h1>
         </div>
       </div>
-
       <WhoIAmBlock />
 
-
-      <div className="flex flex-col justify-start items-end min-h-screen gap-3 w-full border-t-1 ">
-        <h1 className="text-6xl text-white/30 justify-self-end">What I Do</h1>
+      <hr className="w-full border-t-1 my-[100px]" />
+      <div className="flex flex-col justify-start items-end min-h-screen gap-3 w-full ">
+        <h1 className="text-9xl font-bold text-white/30 justify-self-end">What I Do</h1>
         <AboutMeAccordion />
         <br />
       </div>

@@ -1,4 +1,4 @@
-import { Image } from "@nextui-org/react";
+import { phudu } from "../libs/fonts";
 import NextImage from "next/image";
 import snowboardingSelfie from "../../public/snowboarding-selfie.jpeg";
 import GreenDoodle from "../components/doodles/GreenDoodle";
@@ -10,9 +10,9 @@ const description = "Software engineer driven by passion. I'm all about learning
 
 export default function WhoIAmBlock() {
   return (
-    <div className=" flex flex-col justify-between items-start min-h-screen w-full p-6 border-b-1">
+    <div className=" flex flex-col justify-between items-start min-h-screen w-full p-6 md:p-16 ">
       <div>
-        <h1 className="text-6xl text-white/30">Hello,</h1>
+        <h1 className={`${phudu.className} font-bold text-9xl text-white/30`}>Who I Am</h1>
         <p>I'm Chau!</p>
       </div>
 
@@ -24,7 +24,7 @@ export default function WhoIAmBlock() {
             height={600}
             src={snowboardingSelfie}
             alt="selfie"
-            classNames="m-5"
+            classnames="m-5"
           />
         </div>
         <GreenDoodle />
