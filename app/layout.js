@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className="bg-[#DEDFD9]"
+        className="bg-[#c9ccbb]"
       >
         {/* <LoadIn /> */}
         {children}

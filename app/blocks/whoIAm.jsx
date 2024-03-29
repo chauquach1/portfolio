@@ -11,7 +11,10 @@ const description = "Software engineer driven by passion. I'm all about learning
 export default function WhoIAmBlock() {
   return (
     <div className=" flex flex-col justify-between items-start min-h-screen w-full p-6 border-b-1">
-      <h1 className="text-6xl text-white/30 justify-self-end">Who I Am</h1>
+      <div>
+        <h1 className="text-6xl text-white/30">Hello,</h1>
+        <p>I'm Chau!</p>
+      </div>
 
       <div className="flex flex-row justify-center w-full h-max">
         <div className="z-10 first:w-[300px] h-[300px] self-center rounded-[80px] overflow-hidden bg-white/20">
@@ -29,8 +32,13 @@ export default function WhoIAmBlock() {
         <RedDoodle />
       </div>
 
-      <div className="text-3xl text-white/30 text-end self-end">
-        {description}
+      <div className="text-2xl text-white/30 text-end self-end">
+        <p>
+          Software engineer driven by passion.
+          <br />
+          I'm all about learning, adapting, and tackling challenges head-on.
+          <br /> Let's create something amazing!
+        </p>
       </div>
     </div>
   );
