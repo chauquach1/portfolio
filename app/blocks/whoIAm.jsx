@@ -10,10 +10,20 @@ const description = "Software engineer driven by passion. I'm all about learning
 
 export default function WhoIAmBlock() {
   return (
-    <div className=" flex flex-col justify-between items-start min-h-screen w-full p-6 md:p-16 ">
+    <div className=" flex flex-col justify-between items-start min-h-screen w-full ">
       <div>
-        <h1 className={`${phudu.className} font-bold text-9xl text-white/30`}>Who I Am</h1>
-        <p>I'm Chau!</p>
+        <h1
+          className={`${phudu.className} font-bold text-7xl lg:text-8xl xl:text-9xl text-white/30`}
+        >
+          Who I Am.
+        </h1>
+        <div className="p-3 max-w-[800px]">
+          <p>
+            Nice to meet you! I'm Chau, a fullstack developer who loves seeing
+            ideas become reality. I'm passionate about creating unique
+            user-centric experiences that are scalable and reliable.{" "}
+          </p>
+        </div>
       </div>
 
       <div className="flex flex-row justify-center w-full h-max">
@@ -33,12 +43,7 @@ export default function WhoIAmBlock() {
       </div>
 
       <div className="text-2xl text-white/30 text-end self-end">
-        <p>
-          Software engineer driven by passion.
-          <br />
-          I'm all about learning, adapting, and tackling challenges head-on.
-          <br /> Let's create something amazing!
-        </p>
+        Let's create something amazing!
       </div>
     </div>
   );

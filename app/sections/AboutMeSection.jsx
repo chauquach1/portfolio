@@ -39,7 +39,7 @@ export default function AboutMe() {
       transition={{ type: "spring", damping: 300 }}
     >
       {/* banner */}
-      <div className="flex flex-row h-[200px] w-full text-start justify-start overflow-x-hidden">
+      <div className="flex flex-row h-[50px] w-full text-start justify-start overflow-x-hidden">
         <div className="flex flex-row items-center text-3xl text-center text-white/30">
           <h1 className="my-auto min-w-screen text-slate-500"></h1>
         </div>
@@ -48,7 +48,7 @@ export default function AboutMe() {
 
       <hr className="w-full border-t-1 my-[100px]" />
       <div className="flex flex-col justify-start items-end min-h-screen gap-3 w-full ">
-        <h1 className="text-9xl font-bold text-white/30 justify-self-end">What I Do</h1>
+        <h1 className="text-9xl font-bold text-white/30 justify-self-end">What I Do.</h1>
         <AboutMeAccordion />
         <br />
       </div>
