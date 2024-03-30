@@ -19,7 +19,7 @@ export default function AboutMeAccordion() {
       <AccordionItem
         key="1"
         aria-label="Accordion 1"
-        title="01 Frontend Developer"
+        title="01 Frontend"
       >
         <h1 className="">Something about being a Frontend Developer</h1>
       </AccordionItem>
@@ -27,11 +27,11 @@ export default function AboutMeAccordion() {
       <AccordionItem
         key="2"
         aria-label="Accordion 2"
-        title="02 Backend Developer"
+        title="02 Backend"
       >
         <h1>Something about being a Backend Developer</h1>
       </AccordionItem>
-      <AccordionItem key="3" aria-label="Accordion 3" title="03 Web Developer">
+      <AccordionItem key="3" aria-label="Accordion 3" title="03 Web">
         <h1>Something about being a Web Developer</h1>
       </AccordionItem>
     </Accordion>

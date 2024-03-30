@@ -10,10 +10,10 @@ const description = "Software engineer driven by passion. I'm all about learning
 
 export default function WhoIAmBlock() {
   return (
-    <div className=" flex flex-col justify-between items-start min-h-screen w-full ">
+    <div className=" flex flex-col justify-between items-start min-h-screen w-full pb-[50px]">
       <div>
         <h1
-          className={`${phudu.className} font-bold text-7xl lg:text-8xl xl:text-9xl text-white/30`}
+          className={`${phudu.className} font-bold text-7xl lg:text-8xl xl:text-9xl text-white/30 align-text-top`}
         >
           Who I Am.
         </h1>

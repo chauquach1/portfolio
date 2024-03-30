@@ -115,7 +115,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           style={{ opacity }}
-          className=" w-full text-center font-bold min-h-[80px] text-2xl pe-2 text-black/40"
+          className=" w-full text-center font-bold min-h-[80px] text-2xl text-black/40"
         >
           {caption}
         </motion.div>

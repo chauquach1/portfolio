@@ -2,7 +2,8 @@
 import AboutMeAccordion from "../components/sandbox/aboutMeAccordion/AboutMeAccordion";
 import { useState, useEffect, useRef, use } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import WhoIAmBlock from "../blocks/whoIAm";
+import WhoIAmBlock from "../blocks/WhoIAm"
+import WhatIDoBlock from "../blocks/WhatIDo";
 
 export default function AboutMe() {
   const [zIndex, setZIndex] = useState("z-0");
@@ -46,12 +47,8 @@ export default function AboutMe() {
       </div>
       <WhoIAmBlock />
 
-      <hr className="w-full border-t-1 my-[100px]" />
-      <div className="flex flex-col justify-start items-end min-h-screen gap-3 w-full ">
-        <h1 className="text-9xl font-bold text-white/30 justify-self-end">What I Do.</h1>
-        <AboutMeAccordion />
-        <br />
-      </div>
+      {/* <div className="w-full bg-gradient-to-b from-transparent to-[#c9ccbb]  h-[100px]" /> */}
+      <WhatIDoBlock />
     </motion.section>
   );
 }
