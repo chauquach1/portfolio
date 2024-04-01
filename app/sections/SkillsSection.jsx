@@ -50,7 +50,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="relative z-10 w-full bg-zinc-950 flex flex-row flex-wrap lg:flex-nowrap justify-center items-center h-screen p-4 gap-6 text-white "
+      className="relative z-10 w-full bg-zinc-950 rounded-3xl flex flex-row flex-wrap lg:flex-nowrap justify-center items-center h-screen p-4 gap-6 text-white "
     >
       <div className="container grid grid-cols-12 grid-rows-4 h-3/4 w-full justify-center rounded-3xl">
         <div className="col-span-full row-span-2 justify-center rounded-3xl bg-slate-900 items-center rounded-br-none"></div>

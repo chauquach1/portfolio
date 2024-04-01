@@ -35,19 +35,12 @@ export default function AboutMe() {
   return (
     <motion.section
       ref={targetRef}
-      className={`${zIndex} relative me-auto bg-zinc-950 overflow-x-hidden min-h-max min-w-screen max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px]`}
+      className={`${zIndex} relative me-auto bg-zinc-950 overflow-y-hidden min-h-screen min-w-screen max-w-screen flex flex-col self-center items-center overflow-hidden justify-between rounded-t-[50px]`}
       style={{ scaleX: xSmooth }}
       transition={{ type: "spring", damping: 300 }}
     >
-      {/* banner */}
-      <div className="flex flex-row h-[50px] w-full text-start justify-start overflow-x-hidden">
-        <div className="flex flex-row items-center text-3xl text-center text-white/30">
-          <h1 className="my-auto min-w-screen text-slate-500"></h1>
-        </div>
-      </div>
       <WhoIAmBlock />
 
-      {/* <div className="w-full bg-gradient-to-b from-transparent to-[#c9ccbb]  h-[100px]" /> */}
       <WhatIDoBlock />
     </motion.section>
   );
