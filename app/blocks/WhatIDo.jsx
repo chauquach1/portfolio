@@ -8,9 +8,9 @@ export default function WhatIDoBlock() {
     <>
       <div
         id="what-i-do-block"
-        className="bg-zinc-950 h-full min-h-screen w-full py-[100px]"
+        className="bg-zinc-950 h-full min-h-screen w-full"
       >
-        <div className=" bg-[#c9ccbb] flex flex-col justify-between items-end h-screen min-h-screen w-full rounded-t-[50px] my-[100px] pt-[100px]">
+        <div className=" bg-[#c9ccbb] flex flex-col justify-between items-end h-[110vh] min-h-screen w-full rounded-t-[50px] mt-[100px] ">
           <h1 className="text-9xl font-bold text-white/30 self-center my-[100px]">
             What I Do.
           </h1>
@@ -19,11 +19,13 @@ export default function WhatIDoBlock() {
             className=" h-full w-full flex flex-row justify-around items-center text-center gap-3 px-4 text-7xl font-bold "
           >
             <SkillsAccordion skill={"Frontend"} />
-            <div className="min-h-full text-base text-white/20 ">{quote1}</div>
+            <div className="flex flex-col h-full min-h-full w-full text-base items-center text-white/20 ">
+              <p className="my-auto">{quote1}</p>
+            </div>
             <SkillsAccordion skill={"Backend"} />
           </div>
-          <div className="h-[200px] mt-[100px] w-full border-t-1"></div>
         </div>
+          <div className="h-[200px] mt-[100px] w-full border-t-1"></div>
       </div>
     </>
   );
