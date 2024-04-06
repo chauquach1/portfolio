@@ -1,5 +1,5 @@
-import WhoIAmBlock from "../blocks/WhoIAm";
-import WhatIDoBlock from "../blocks/WhatIDo";
+import WhoIAmBlock from "../blocks/WhoIAm2";
+import WhatIDoBlock from "../blocks/WhatIDo2";
 
 export default function AboutMe() {
   return (
