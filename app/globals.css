@@ -76,7 +76,6 @@ h1 {
 
 main {
   font-family: var(--font-roboto-mono);
-  /* background: radial-gradient(circle, rgba(204,230,181,.7) 21%, rgba(141,137,166,1) 100%); */
 }
 
 .reveal-container {

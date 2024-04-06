@@ -3,8 +3,8 @@ import { Phudu, Roboto_Mono } from 'next/font/google'
 export const phudu = Phudu({
   subsets: ['latin'],
   variable: '--font-phudu',
-  axes: ['wght'],
-  display: 'swap'
+  display: 'swap',
+  adjustFontFallback: false,
 })
 
 export const robotoMono = Roboto_Mono({

@@ -15,6 +15,10 @@ const config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        sans: ['var(--font-phudu)'],
+        mono: ['var(--font-roboto-mono)'],
+      },
     },
   },
   darkMode: 'class',

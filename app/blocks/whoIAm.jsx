@@ -7,13 +7,17 @@ import {
   useSpring,
   useMotionValueEvent,
 } from "framer-motion";
-import { phudu } from "../libs/fonts";
 import NextImage from "next/image";
 import snowboardingSelfie from "../../public/snowboarding-selfie.jpeg";
 import GreenDoodle from "../components/doodles/GreenDoodle";
 import PurpleDoodle from "../components/doodles/PurpleDoodle";
 import RedDoodle from "../components/doodles/RedDoodle";
 
+const introQuotes = [
+  "Who I Am.",
+  "Nice to meet you! I'm Chau, a fullstack developer who loves seeing ideas become reality. I'm passionate about creating unique user-centric experiences that are scalable and reliable.",
+  "Let's create something amazing!",
+];
 
 export default function WhoIAmBlock() {
   const targetRef = useRef(null);
@@ -42,8 +46,7 @@ export default function WhoIAmBlock() {
     setInsetX(latest);
   });
 
-  setTimeout(() => {
-  }, 3000);
+  setTimeout(() => {}, 3000);
 
   return (
     <motion.div
@@ -53,17 +56,11 @@ export default function WhoIAmBlock() {
     >
       <div>
         <h1
-          className={`${phudu.className} font-bold text-7xl lg:text-8xl xl:text-9xl text-white/30 my-[100px] align-text-top`}
+          className={` font-bold text-7xl lg:text-8xl xl:text-9xl text-white/30 my-[100px] align-text-top`}
         >
-          Who I Am.
+          {introQuotes[0]}
         </h1>
-        <div className="p-3 max-w-[800px]">
-          <p>
-            Nice to meet you! I'm Chau, a fullstack developer who loves seeing
-            ideas become reality. I'm passionate about creating unique
-            user-centric experiences that are scalable and reliable.{" "}
-          </p>
-        </div>
+        <div className="p-3 max-w-[800px]">{introQuotes[1]}</div>
       </div>
 
       <div className="flex flex-row justify-center w-full h-max">
@@ -82,7 +79,7 @@ export default function WhoIAmBlock() {
       </div>
 
       <div className="text-2xl text-white/30 text-end self-end mb-[100px]">
-        Let's create something amazing!
+        {introQuotes[2]}
       </div>
     </motion.div>
   );
