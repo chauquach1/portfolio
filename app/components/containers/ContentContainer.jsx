@@ -7,21 +7,22 @@ export default function ContentContainer({children}) {
   const targetRef = useRef(null);
 
   // ANIMATION POSITION START
-  const startX = 0.05
-  const startY = 0
+  const startX = 0
+  const startY = 0.98
 
   // ANIMATION POSITION END
-  const endX = 0.1
-  const endY = 0.1
+  const endX = 0
+  const endY = 0.85
 
   // NUMERICAL VALUE FOR SCROLL PROGRESS
   const { scrollYProgress } = useScroll({
-    // offset: ["start 0.5", "center start"],
+    // offset: ["0.5 0.98", "0.5 0.5"],
+    target: targetRef,
     offset: [`${startX}, ${startY}`, `${endX}, ${endY}`],
   });
 
   // SCALE X ANIMATION
-  const scaleX = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const scaleX = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const xSmooth = useSpring(scaleX, { damping: 40, stiffness: 1000 });
 
   setTimeout(() => {
@@ -30,15 +31,17 @@ export default function ContentContainer({children}) {
 
   
   return (
-    <section className="block h-screen min-h-fit w-full bg-transparent">
+    <>
+    {/* <section className="block h-screen min-h-fit w-full bg-transparent"> */}
       <motion.div
         ref={targetRef}
-        className={`${zIndex} absolute me-auto bg-black overflow-x-hidden min-h-fit w-full max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px] pt-9 px-2`}
+        className={`${zIndex} relative me-auto bg-zinc-950 overflow-x-hidden min-h-max min-w-screen max-w-screen flex flex-col self-center items-center overflow-hidden justify-start rounded-t-[50px]`}
         style={{ scaleX: xSmooth }}
         transition={{ type: "spring", damping: 300 }}
       >
         {children}
       </motion.div>
-    </section>
+    {/* </section> */}
+    </>
   );
 }

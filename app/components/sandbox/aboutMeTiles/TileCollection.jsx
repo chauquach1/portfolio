@@ -66,7 +66,7 @@ export default function TileCollection() {
   ];
 
   return (
-    <div className="flex flex-row flex-grow flex-wrap items-start justify-around w-full">
+    <div className="flex flex-row flex-wrap items-start justify-around max-h-1/2 w-full">
       {tiles.map((tile, index) => (
         <Tile
           key={index}

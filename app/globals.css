@@ -16,6 +16,10 @@
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -56,6 +60,9 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -63,8 +70,12 @@ body {
   background: rgb(var(--foreground-rgb));
 }
 
+h1 {
+  font-family: var(--font-phudu);
+}
+
 main {
-  /* background: radial-gradient(circle, rgba(204,230,181,.7) 21%, rgba(141,137,166,1) 100%); */
+  font-family: var(--font-roboto-mono);
 }
 
 .reveal-container {

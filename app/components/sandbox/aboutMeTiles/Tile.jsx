@@ -10,7 +10,7 @@ export default function Tile({ color, outlineColor, textColor, height, width, la
   
   return (
     <div
-      className={`flex flex-col outline-black/10 hover:bg-${color} hover:text-white ${textColor} font-bold bg-white/20 -outline-offset-2 outline outline-3 ${height} ${width} rounded-xl p-2`}
+      className={`flex flex-col outline-black/10 hover:bg-${color} hover:text-white ${textColor} font-bold bg-white/20 -outline-offset-2 outline outline-3 ${height} ${width} rounded-xl p-2 overflow-y-hidden`}
       // onMouseEnter={(e) => setRevealContent(true)}
       // onMouseLeave={(e) => setRevealContent(false)}
     >
