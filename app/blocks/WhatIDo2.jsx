@@ -19,7 +19,7 @@ export default function WhatIDoBlock() {
           </h1>
           <div
             id="skills-container"
-            className=" h-full w-full flex flex-row justify-around items-center text-center gap-3 px-4 text-7xl font-bold "
+            className=" h-full w-full grid grid-cols-3 justify-around items-center text-center gap-3 px-4 text-7xl font-bold "
           >
             <SkillsAccordion skill={"Frontend"} />
             <div className="flex flex-col h-full min-h-full w-full text-base items-center text-white/20 ">
