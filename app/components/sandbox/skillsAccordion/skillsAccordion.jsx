@@ -1,19 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
-import {
-  motion,
-  useSpring,
-  useMotionValue,
-  useMotionValueEvent,
-  useTransform,
-  AnimatePresence,
-} from "framer-motion";
-import SkillsDetails from "./skillsDetails";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import SkillsCurtain from "./SkillsCurtain";
 
 const skillsData = {
   Frontend: {
     Languages: ["HTML", "CSS", "JavaScript"],
-    "Frameworks & Libraries": ["Next.js", "React", "TailwindCSS", "Bootstrap"],
+    "Frameworks & Libraries": ["Next.js", "React", "TailwindCSS", "FramerMotion", "Bootstrap"],
     Tools: ["Figma", "Photoshop", "Illustrator"],
   },
   Backend: {
@@ -23,69 +16,45 @@ const skillsData = {
   },
 };
 
+// TAILWIND CLASSES
+const h2Classes = "underline text-base lg:text-xl 2xl:text-2xl text-[#828282] font-bold";
+const pClasses = "text-xs text-white";
+
 export default function SkillsAccordion({ skill }) {
   const [showDetails, setShowDetails] = useState(false);
-
-  const titleColors = {
-    Frontend: "text-[#AEB372]",
-    Backend: "text-[#567198]",
-    Default: "text-[#000000]",
-  };
-  const titleColor = titleColors[skill] || titleColors.Default;
-  const h2Classes = "underline text-xl text-[#828282] font-bold";
-  const pClasses = "text-xs text-white";
-
   const skillsSection = skillsData[skill];
 
-  const toggleDetails = () =>
-    setShowDetails((prevShowDetails) => !prevShowDetails);
-
-  const h = useMotionValue(0);
-
-  const scaleHeight = useTransform(h, [0, 1], [0, 120]);
-
-  const springScale = useSpring(scaleHeight, { damping: 50, stiffness: 1000 });
-
-  useEffect(() => {
-    console.log(`Show ${skill}`, showDetails);
-  }, [showDetails]);
-
-  useMotionValueEvent(h, "change", (latest) => {
-    console.log("h latest: ", latest);
-  });
-
-  const variants = {
-    open: { height: "250px" },
-    closed: { height: "0px" },
-  };
-
   return (
-    <>
+    <div
+      className={`relative col-span-1 flex flex-col gap-[250px] justify-center items-center w-full min-h-max h-full mx-auto `}
+    >
       <div
-        className={`flex flex-col justify-center w-max min-h-max h-[600px] ${titleColor} mx-auto text-5xl font-bold `}
-        onClick={toggleDetails}
-        role="button"
-        tabIndex="0"
+        className={`relative w-full h-max flex flex-col items-center justify-center my-auto `}
       >
-        <h1>{skill}</h1>
-        <div className="h-fit flex flex-col min-h-fit overflow-hidden">
-          <motion.div
-            className="min-h-full w-full flex flex-col gap-3"
-            initial="closed "
-            animate={showDetails ? "open" : "closed"}
-            variants={variants}
-          >
-            {Object.entries(skillsSection).map(([section, items]) => (
-              <div key={section} className="flex flex-col gap-3">
-                <h2 className={h2Classes}>{section}</h2>
-                <p className={pClasses}>{items.join(" | ")}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-
-        <h1>Development</h1>
+        <SkillsCurtain
+          showDetails={showDetails}
+          setShowDetails={setShowDetails}
+          label={skill}
+        />
+        <motion.div
+          role="button"
+          className="min-h-[300px] w-full mt-auto flex flex-col justify-between max-w-[500px] gap-3 bg-white/20 rounded-2xl p-3"
+          initial={{ clipPath: `inset(0% 0% 0% 0%)`, opacity: 0 }}
+          animate={{
+            clipPath: showDetails ? `inset(0% 0% 0% 0%)` : `inset(20% 30%)`,
+            opacity: showDetails ? 1 : 0,
+          }}
+          transition={{ damping: 50, stiffness: 1000 }}
+          onTap={() => setShowDetails(!showDetails)}
+        >
+          {Object.entries(skillsSection).map(([section, items]) => (
+            <div key={section} className="h-full flex flex-col gap-1">
+              <h2 className={h2Classes}>{section}</h2>
+              <p className={pClasses}>{items.join(" | ")}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 }
