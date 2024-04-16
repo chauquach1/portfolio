@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import PortfolioButtons from "./PortfolioButtons";
 
 export default function PortfolioSection() {
-  const [projectIndex, setProjectIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
 
   return (
@@ -16,8 +16,8 @@ export default function PortfolioSection() {
         What I've Made.
       </h1>
       <PortfolioButtons
-        projectIndex={projectIndex}
-        setProjectIndex={setProjectIndex}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
       />
     </div>
   );

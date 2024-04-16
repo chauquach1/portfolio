@@ -1,25 +1,34 @@
 "use client";
+import { useState, useEffect } from "react";
 import { motion, useMotionValue} from "framer-motion";
 
-const project = ["PLANUR", "REACTEMON", "WURDLE"];
-const inactive = "h-max text-4xl font-bold text-black bg-white rounded-full px-4";
-const active = "h-max text-4xl font-bold text-green-500 bg-green-200 rounded-full px-4";
+const inactive = "h-max text-2xl font-bold text-black bg-white rounded-full px-4";
+const active = "h-max text-2xl font-bold text-green-500 bg-green-200 rounded-full px-4";
 const btnVariants = {
-  hover: {
-    scale: 1.1,
-    transition: {
-      duration: 0.3,
-    },
+  inactive: {
+    scale: 1,
   },
+  active: {
+    scale: 1.2,
+  },
+  
 };
 
-export default function PortfolioButtons({ project, projectIndex, setProjectIndex }) {
+export default function PortfolioButtons({ index, project, activeIndex, setActiveIndex }) {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    index === activeIndex ? setIsActive(true) : setIsActive(false);
+  }, [activeIndex]);
+
   return (
     <motion.button
       key={index}
-      className={projectIndex === index ? active : inactive}
-      onClick={() => setProjectIndex(index)}
-      animate={{ scale: 1.2 }}
+      className={isActive ? active : inactive}
+      onClick={() => setActiveIndex(index)}
+      variants={btnVariants}
+      initial="inactive"
+      animate={isActive ? "active" : "inactive"}
     >
       {project}
     </motion.button>
