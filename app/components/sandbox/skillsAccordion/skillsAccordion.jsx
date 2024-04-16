@@ -26,7 +26,7 @@ export default function SkillsAccordion({ skill }) {
 
   return (
     <div
-      className={`relative col-span-1 row-span-2 flex flex-col gap-[250px] justify-center items-center w-full min-h-max h-full mx-auto `}
+      className={`relative col-span-1 row-span-4 flex flex-col gap-[250px] justify-center items-center w-full min-h-max h-full mx-auto `}
     >
       <div
         className={`relative w-full h-max flex flex-col items-center justify-center my-auto `}

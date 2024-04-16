@@ -2,7 +2,7 @@ import HeroSection from "./sections/HeroSection";
 import ContentContainer from "./components/containers/ContentContainer";
 import AboutMeSection from "./sections/AboutMeSection";
 import SkillsSection from "./sections/SkillsSection";
-import PortfolioSection from "./sections/PortfolioSection";
+import PortfolioSection2 from "../app/components/sandbox/portfolioSection/PortfolioSectionV2";
 import SkillsAccordion from "./components/sandbox/skillsAccordion/skillsAccordion";
 
 
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="">
         <HeroSection />
         <AboutMeSection />
-        <PortfolioSection />
+        <PortfolioSection2 />
     </main>
   );
 }
