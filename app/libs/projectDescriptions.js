@@ -8,6 +8,7 @@ import wurdle1 from "../../public/wurdle/wurdle1.png";
 import wurdle2 from "../../public/wurdle/wurdle2.png";
 
 const projectDescriptions = [
+  // Planur Description
   {
     title: "Planur",
     summary: "A travel planning app",
@@ -23,8 +24,7 @@ const projectDescriptions = [
         icon: "calendar",
       },
       {
-        description:
-          "Add, track and update your travel accommodations",
+        description: "Add, track and update your travel accommodations",
         icon: "house",
       },
     ],
@@ -32,12 +32,20 @@ const projectDescriptions = [
       "Explore my web-based travel planner—a user-friendly tool to organize your adventures. Craft, store, and streamline your travel plans effortlessly.",
     frontEnd: ["Next.js", "React", "Tailwind CSS"],
     backEnd: ["MongoDB", "Mongoose", "Node.js"],
-    languages: ["JavaScript", "HTML", "CSS"],
+    tags: {
+      type: "Personal",
+      languages: ["JavaScript", "HTML", "CSS"],
+      frontend: ["Next.js", "React", "Framer Motion", "Tailwind"],
+      backend: ["Mongoose", "Node.js"],
+      database: ["MongoDB", "Supabase"],
+      auth: ["Supabase"],
+    },
     liveLink: "https://planur-v2.vercel.app/",
     github: "https://github.com/chauquach1/planur_v2",
     projectType: "Personal",
-    images: [planur1, planur2, planur3, planur4]
+    images: [planur1, planur2, planur3, planur4],
   },
+  // Reactemon Description
   {
     title: "Reactemon",
     summary: "A React-based Pokedex",
@@ -61,18 +69,25 @@ const projectDescriptions = [
         description:
           "Track Card Values: Stay up-to-date with real-time card value trends, making informed decisions on buying, selling, or trading cards.",
         icon: "trending-up",
-      }
+      },
     ],
     description:
       "Reactemon is the ultimate app for Pokemon enthusiasts and card collectors. With its powerful fetch calls to the official Pokemon API, you can effortlessly search for individual Pokemon cards or entire card sets. Whether you're a seasoned collector or just starting your journey, this app is your one-stop solution for organizing and managing your Pokemon card collection.",
-    frontEnd: ["React", "Bootstrap"],
-    backEnd: ["Express", "MongoDB", "Mongoose", "Node.js"],
-    languages: ["JavaScript", "HTML", "CSS"],
+    tags: {
+      type: "Collaborative",
+      responsibilities: ["UI/UX", "Frontend"],
+      languages: ["JavaScript", "HTML", "CSS"],
+      frontend: ["React", "Bootstrap", "Tailwind"],
+      backend: ["Express.js", "Mongoose", "Node.js"],
+      database: ["MongoDB"],
+      auth: ["Supabase"],
+    },
     liveLink: "https://main--mellow-cheesecake-394e88.netlify.app/",
     github: "https://github.com/ArmadaDev25/FortisFrontend",
     projectType: "Collaborative",
-    images: [reactemon1, reactemon2]
+    images: [reactemon1, reactemon2],
   },
+  // Wurdle Description
   {
     title: "Wurdle",
     summary: "A replica Wordle!",
@@ -95,11 +110,14 @@ const projectDescriptions = [
     ],
     description:
       "This JavaScript and CSS-powered replica faithfully captures the essence of the beloved Wordle game, offering you an engaging word-guessing challenge right in your browser.",
-    languages: ["JavaScript", "HTML", "CSS"],
+    tags: {
+      type: "Personal",
+      languages: ["JavaScript", "HTML", "CSS"],
+    },
     liveLink: "https://chauquach1.github.io/wordle-game/",
     github: "https://github.com/chauquach1/wordle-game",
     projectType: "Personal",
-    images: [wurdle2, wurdle1]
+    images: [wurdle2, wurdle1],
   },
 ];
 
