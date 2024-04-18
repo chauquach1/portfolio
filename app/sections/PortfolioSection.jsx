@@ -13,8 +13,12 @@ export default function PortfolioSection() {
   }, [projectIndex]);
 
   return (
-    <div id="projects" className="relative flex flex-col bg-zinc-950 items-center w-full gap-4 p-2 ">
-      <h1 className="text-3xl text-center text-white">Recent Projects</h1>
+    <div
+      id="projects"
+      className="relative flex flex-col min-h-screen bg-zinc-950 rounded-t-[50px] items-center w-full p-2 "
+    >
+      <div className=" flex flex-col h-[100px] text-center items-start w-full mx-auto"></div>
+      <h1 className="w-full text-9xl font-bold text-end text-white">{"What I've Made."}</h1>
       <div
         id="project-container"
         className="w-full flex flex-row justify-center gap-0 sm:gap-2"
@@ -42,7 +46,10 @@ export default function PortfolioSection() {
             projectIndex={projectIndex}
           />
         </div>
-        <div id="project-display-container" className="sticky top-0 container w-full">
+        <div
+          id="project-display-container"
+          className="sticky top-0 container w-full"
+        >
           <ProjectDisplay project={project} />
         </div>
       </div>

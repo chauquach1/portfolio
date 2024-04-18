@@ -1,10 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import SkillsCurtain from "./SkillsCurtain";
 
 const skillsData = {
   Frontend: {
     Languages: ["HTML", "CSS", "JavaScript"],
-    "Frameworks & Libraries": ["Next.js", "React", "TailwindCSS", "Bootstrap"],
+    "Frameworks & Libraries": ["Next.js", "React", "TailwindCSS", "FramerMotion", "Bootstrap"],
     Tools: ["Figma", "Photoshop", "Illustrator"],
   },
   Backend: {
@@ -14,43 +16,45 @@ const skillsData = {
   },
 };
 
+// TAILWIND CLASSES
+const h2Classes = "underline text-base lg:text-xl 2xl:text-2xl text-[#828282] font-bold";
+const pClasses = "text-xs text-white";
+
 export default function SkillsAccordion({ skill }) {
   const [showDetails, setShowDetails] = useState(false);
-
-  const titleColors = {
-    Frontend: "text-[#AEB372]",
-    Backend: "text-[#567198]",
-    Default: "text-[#000000]",
-  };
-
-  const toggleDetails = () => setShowDetails(prevShowDetails => !prevShowDetails);
-
-  const titleColor = titleColors[skill] || titleColors.Default;
-
   const skillsSection = skillsData[skill];
 
-  const h2Classes = "underline text-3xl text-[#828282] font-bold";
-  const pClasses = "text-xl text-white";
-
   return (
-    <>
+    <div
+      className={`relative col-span-1 row-span-4 flex flex-col gap-[250px] justify-center items-center w-full min-h-max h-full mx-auto `}
+    >
       <div
-        className={`flex flex-col w-full ${titleColor} text-5xl font-bold`}
-        onClick={toggleDetails} role="button" tabIndex="0"
+        className={`relative w-full h-max flex flex-col items-center justify-center my-auto `}
       >
-        <h1>{skill}</h1>
-        {showDetails ? (
-          <div>
-            {Object.entries(skillsSection).map(([section, items]) => (
-              <div key={section} className="flex flex-col gap-3">
-                <h2 className={h2Classes}>{section}</h2>
-                <p className={pClasses}>{items.join(" | ")}</p>
-              </div>
-            ))}
-          </div>
-        ) : null}
-        <h1>Development</h1>
+        <SkillsCurtain
+          showDetails={showDetails}
+          setShowDetails={setShowDetails}
+          label={skill}
+        />
+        <motion.div
+          role="button"
+          className="min-h-[300px] w-full mt-auto flex flex-col justify-between max-w-[500px] gap-3 bg-white/20 rounded-2xl p-3"
+          initial={{ clipPath: `inset(0% 0% 0% 0%)`, opacity: 0 }}
+          animate={{
+            clipPath: showDetails ? `inset(0% 0% 0% 0%)` : `inset(20% 30%)`,
+            opacity: showDetails ? 1 : 0,
+          }}
+          transition={{ damping: 50, stiffness: 1000 }}
+          onTap={() => setShowDetails(!showDetails)}
+        >
+          {Object.entries(skillsSection).map(([section, items]) => (
+            <div key={section} className="h-full flex flex-col gap-1">
+              <h2 className={h2Classes}>{section}</h2>
+              <p className={pClasses}>{items.join(" | ")}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </>
+    </div>
   );
 }
