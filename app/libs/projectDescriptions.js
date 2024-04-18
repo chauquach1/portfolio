@@ -33,7 +33,7 @@ const projectDescriptions = [
     frontEnd: ["Next.js", "React", "Tailwind CSS"],
     backEnd: ["MongoDB", "Mongoose", "Node.js"],
     tags: {
-      type: "Personal",
+      type: ["Personal"],
       languages: ["JavaScript", "HTML", "CSS"],
       frontend: ["Next.js", "React", "Framer Motion", "Tailwind"],
       backend: ["Mongoose", "Node.js"],
@@ -74,7 +74,7 @@ const projectDescriptions = [
     description:
       "Reactemon is the ultimate app for Pokemon enthusiasts and card collectors. With its powerful fetch calls to the official Pokemon API, you can effortlessly search for individual Pokemon cards or entire card sets. Whether you're a seasoned collector or just starting your journey, this app is your one-stop solution for organizing and managing your Pokemon card collection.",
     tags: {
-      type: "Collaborative",
+      type: ["Collaborative"],
       responsibilities: ["UI/UX", "Frontend"],
       languages: ["JavaScript", "HTML", "CSS"],
       frontend: ["React", "Bootstrap", "Tailwind"],
@@ -111,7 +111,7 @@ const projectDescriptions = [
     description:
       "This JavaScript and CSS-powered replica faithfully captures the essence of the beloved Wordle game, offering you an engaging word-guessing challenge right in your browser.",
     tags: {
-      type: "Personal",
+      type: ["Personal"],
       languages: ["JavaScript", "HTML", "CSS"],
     },
     liveLink: "https://chauquach1.github.io/wordle-game/",

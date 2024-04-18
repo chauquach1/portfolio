@@ -18,7 +18,7 @@ export default function PortfolioSection() {
       className="relative flex flex-col min-h-screen bg-zinc-950 rounded-t-[50px] items-center w-full p-2 "
     >
       <div className=" flex flex-col h-[100px] text-center items-start w-full mx-auto"></div>
-      <h1 className="w-full text-9xl font-bold text-end text-white">What I've Made.</h1>
+      <h1 className="w-full text-9xl font-bold text-end text-white">{"What I've Made."}</h1>
       <div
         id="project-container"
         className="w-full flex flex-row justify-center gap-0 sm:gap-2"
