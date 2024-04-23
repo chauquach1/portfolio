@@ -63,7 +63,7 @@ export default function ProjectPreview({previews}) {
             key={page}
             src={imgSrcs[page]}
             custom={direction}
-            className="absolute rounded-2xl h-full mt-auto p-10 top-0"
+            className="absolute rounded-2xl h-full mt-auto p-10 pt-0 top-0"
             style={{ objectFit: "contain" }}
             alt="project preview"
             variants={variants}
