@@ -20,7 +20,7 @@ const projectDescriptions = [
       },
       {
         description:
-          "View your travel plans on a calendar and easily manage your itinerary.",
+          "View your travel plans and easily manage multiple itineraries.",
         icon: "calendar",
       },
       {
@@ -57,22 +57,17 @@ const projectDescriptions = [
       },
       {
         description:
-          "Complete Card Sets: Easily browse and complete your card sets. Keep track of which cards you're missing and trade with fellow collectors to complete your sets.",
+          "Complete Card Sets: Keep track of which cards you're missing and trade with fellow collectors to complete your sets.",
         icon: "list",
       },
       {
         description:
-          "Add to Your Collection: Quickly add cards to your personal collection with a simple tap. Organize and categorize your cards by set, rarity, condition, and more.",
+          "Add to Your Collection: Quickly add cards to your personal collection with a simple tap.",
         icon: "add",
-      },
-      {
-        description:
-          "Track Card Values: Stay up-to-date with real-time card value trends, making informed decisions on buying, selling, or trading cards.",
-        icon: "trending-up",
       },
     ],
     description:
-      "Reactemon is the ultimate app for Pokemon enthusiasts and card collectors. With its powerful fetch calls to the official Pokemon API, you can effortlessly search for individual Pokemon cards or entire card sets. Whether you're a seasoned collector or just starting your journey, this app is your one-stop solution for organizing and managing your Pokemon card collection.",
+      "Reactemon is the ultimate web-app for Pokemon enthusiasts and card collectors. With its powerful fetch calls to a Pokemon API, you can effortlessly search for individual Pokemon cards or entire card sets.",
     tags: {
       type: ["Collaborative"],
       responsibilities: ["UI/UX", "Frontend"],
@@ -94,17 +89,12 @@ const projectDescriptions = [
     features: [
       {
         description:
-          "Experience the excitement of Wordle in a whole new light with our meticulously crafted web game!",
-        icon: "game",
-      },
-      {
-        description:
-          "Immerse yourself in the world of letters and words as you test your vocabulary and deduction skills. The familiar interface and intuitive gameplay make it a delightful experience for Wordle enthusiasts and word-game aficionados alike.",
+          "Challenge Yourself: Put your vocabulary and deduction skills to the test!",
         icon: "language",
       },
       {
         description:
-          "Challenge your friends, sharpen your word skills, and embrace the nostalgia of Wordle with our user-friendly, browser-based rendition. Dive in and start guessing those words today!",
+          "See Your Progress: Track your scores and improve your word-guessing abilities.",
         icon: "play",
       },
     ],

@@ -8,19 +8,21 @@ export default function PortfolioSection() {
 
 
   return (
-    <div
-      id="projects"
-      className="relative flex flex-col min-h-screen h-full bg-zinc-950 rounded-t-[50px] items-center w-full p-2 "
-    >
-      <div className=" flex flex-col h-[100px] text-center items-start w-full mx-auto"></div>
-      <h1 className="w-full text-9xl font-bold text-end text-white">
-        {"What I've Made."}
-      </h1>
-      <PortfolioButtons
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-      />
-      <ProjectDisplay activeIndex={activeIndex} />
-    </div>
+    <>
+      <div className=" relative flex flex-col h-[100px] rounded-t-[50px] bg-zinc-950 text-center items-start w-full mx-auto"></div>
+      <div
+        id="projects"
+        className="relative flex flex-col min-h-screen h-full bg-zinc-950 items-center w-full p-2 "
+      >
+        <h1 className="w-full text-9xl font-bold text-end text-white">
+          {"What I've Made."}
+        </h1>
+        <PortfolioButtons
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        />
+        <ProjectDisplay activeIndex={activeIndex} />
+      </div>
+    </>
   );
 }
