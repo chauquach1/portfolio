@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import {useState, useEffect} from "react";
 import PreviewNavBtn from "./PreviewNavBtn";
+import PageIndicator from "./PageIndicator";
 
 const btnClass = "z-10 absolute self-center w-[50px] h-full";
 
@@ -49,39 +50,52 @@ export default function ProjectPreview({previews}) {
   };
   
   return (
-    <div className="relative flex flex-row overflow-y-hidden items-start justify-center w-full h-[500px] lg:min-w-[750px] rounded-2xl">
-      <PreviewNavBtn role="prev" paginate={paginate} pages={pages} currPage={page} />
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          key={page}
-          src={imgSrcs[page]}
-          custom={direction}
-          className="absolute rounded-2xl h-full mt-auto px-10 top-0"
-          style={{ objectFit: "contain" }}
-          alt="project preview"
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
+    <>
+      <div className="relative flex flex-col overflow-y-hidden items-center justify-center w-full h-[500px] lg:min-w-[750px] rounded-2xl">
+        <PreviewNavBtn
+          role="prev"
+          paginate={paginate}
+          pages={pages}
+          currPage={page}
         />
-      </AnimatePresence>
-      <PreviewNavBtn role="next" paginate={paginate} pages={pages} currPage={page} />
-    </div>
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.img
+            key={page}
+            src={imgSrcs[page]}
+            custom={direction}
+            className="absolute rounded-2xl h-full mt-auto p-10 top-0"
+            style={{ objectFit: "contain" }}
+            alt="project preview"
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
+              }
+            }}
+          />
+        </AnimatePresence>
+        <PreviewNavBtn
+          role="next"
+          paginate={paginate}
+          pages={pages}
+          currPage={page}
+        />
+        <PageIndicator currPage={page} pages={pages} previews={previews} paginate={paginate}/>
+      </div>
+    </>
   );
 }

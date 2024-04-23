@@ -1,5 +1,5 @@
 import { IoIosArrowForward } from "react-icons/io";
-const btnClass = "z-10 absolute self-center w-[50px] h-full";
+const btnClass = "z-10 absolute self-center w-[50px] h-max";
 
 export default function PreviewNavBtn({role, paginate, pages, currPage}) {
   const action = role === "next" ? 1 : -1;
