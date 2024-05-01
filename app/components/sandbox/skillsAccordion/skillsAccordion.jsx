@@ -18,7 +18,7 @@ const skillsData = {
 
 // TAILWIND CLASSES
 const h2Classes = "underline text-base lg:text-xl 2xl:text-2xl text-[#828282] font-bold";
-const pClasses = "text-xs text-white";
+const pClasses = "text-sm text-white";
 
 export default function SkillsAccordion({ skill }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -38,7 +38,7 @@ export default function SkillsAccordion({ skill }) {
         />
         <motion.div
           role="button"
-          className="min-h-[300px] w-full mt-auto flex flex-col justify-between max-w-[500px] gap-3 bg-white/20 rounded-2xl p-3"
+          className="min-h-[300px] w-full mt-auto flex flex-col justify-between max-w-[500px] gap-3 rounded-2xl p-3"
           initial={{ clipPath: `inset(0% 0% 0% 0%)`, opacity: 0 }}
           animate={{
             clipPath: showDetails ? `inset(0% 0% 0% 0%)` : `inset(20% 30%)`,

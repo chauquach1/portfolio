@@ -8,7 +8,7 @@ import SkillsAccordion from "./components/sandbox/skillsAccordion/skillsAccordio
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="min-w-screen w-screen">
         <HeroSection />
         <AboutMeSection />
         <PortfolioSection2 />

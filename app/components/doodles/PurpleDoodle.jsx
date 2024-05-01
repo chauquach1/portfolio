@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function PurpleDoodle() {
   return (
-    <motion.div className="absolute translate-y-1 z-[9] scale-[130%]">
+    <motion.div className="absolute self-center translate-y-1 z-[9] scale-[110%] sm:scale-[130%]">
       <motion.svg
         width="272"
         height="272"
@@ -13,13 +13,13 @@ export default function PurpleDoodle() {
         <motion.path
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          // transition={{
-          //   duration: 2,
-          //   ease: "easeInOut",
-          //   repeat: Infinity,
-          //   repeatType: "reverse",
-          //   repeatDelay: 1,
-          // }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            // repeat: Infinity,
+            repeatType: "reverse",
+            repeatDelay: 1,
+          }}
           strokeWidth={4}
           strokeDasharray="0 1"
           fillRule="evenodd"

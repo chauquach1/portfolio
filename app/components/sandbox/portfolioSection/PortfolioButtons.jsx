@@ -8,7 +8,7 @@ export default function PortfolioButtons({ activeIndex, setActiveIndex }) {
   return (
     <div
       id="buttons-container"
-      className="w-full min-h-[100px] my-[50px] flex flex-row items-center justify-end gap-10 px-8"
+      className="w-full min-h-[100px] my-[50px] flex flex-row items-center justify-around sm:justify-end sm:gap-10 sm:px-8"
     >
       {project.map((project, index) => (
         <ProjectBtn

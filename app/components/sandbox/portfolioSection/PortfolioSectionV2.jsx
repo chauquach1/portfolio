@@ -9,12 +9,11 @@ export default function PortfolioSection() {
 
   return (
     <>
-      <div className=" relative flex flex-col h-[100px] rounded-t-[50px] bg-zinc-950 text-center items-start w-full mx-auto"></div>
       <div
         id="projects"
-        className="relative flex flex-col min-h-screen h-full bg-zinc-950 items-center w-full p-2 "
+        className=" bg-shark relative flex flex-col min-h-screen h-max items-center w-full sm:p-2 border-t-1 py-[100px]"
       >
-        <h1 className="w-full text-9xl font-bold text-end text-white">
+        <h1 className="w-full text-4xl font-bold text-center sm:text-end text-white">
           {"What I've Made."}
         </h1>
         <PortfolioButtons

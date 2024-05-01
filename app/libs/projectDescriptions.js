@@ -57,11 +57,6 @@ const projectDescriptions = [
       },
       {
         description:
-          "Complete Card Sets: Keep track of which cards you're missing and trade with fellow collectors to complete your sets.",
-        icon: "list",
-      },
-      {
-        description:
           "Add to Your Collection: Quickly add cards to your personal collection with a simple tap.",
         icon: "add",
       },

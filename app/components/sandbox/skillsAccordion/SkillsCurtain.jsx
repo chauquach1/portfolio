@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const curtainClass = "z-50 relative inline-block w-full bg-[#C9CCBB] md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-3xl font-bold";
+const curtainClass = "z-50 relative inline-block w-full bg-shark md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-3xl font-bold";
 
 export default function SkillsCurtain({ showDetails, setShowDetails, label }) {
   

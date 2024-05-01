@@ -15,7 +15,7 @@ export default function ProjectTags({project}) {
       {Object.entries(tags).map(([key, value]) => (
         <div key={key} className="flex flex-row gap-2">
           <h1 className="text-sm">{key}:</h1>
-          <ul className="font-mono flex flex-row gap-3">
+          <ul className="font-mono flex flex-row flex-wrap gap-3">
             {value.map((tag, index) => (
               <li className={`${tagColors[key]} w-max px-3 py-1 rounded-full text-xs`} key={index}>
                 {tag}

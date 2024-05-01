@@ -10,10 +10,10 @@ const config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        shark: {
+          DEFAULT: '#24272c',
+        },
       },
       fontFamily: {
         sans: ['var(--font-phudu)'],

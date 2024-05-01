@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${phudu.variable} ${robotoMono.variable}`}>
       <body
-        className="bg-[#c9ccbb]"
+        className=""
       >
         {/* <LoadIn /> */}
         {children}

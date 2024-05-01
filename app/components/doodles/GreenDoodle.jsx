@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function GreenDoodle() {
   return (
-    <div className="absolute -translate-y-1 -translate-x-36 z-1 scale-[100%]">
+    <div className="absolute self-center -translate-y-12 -translate-x-24 sm:-translate-y-1 sm:-translate-x-36 z-1 scale-80 sm:scale-100">
       <motion.svg
         width="173"
         height="223"
@@ -13,13 +13,13 @@ export default function GreenDoodle() {
         <motion.path
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          // transition={{
-          //   duration: 2,
-          //   ease: "easeInOut",
-          //   repeat: Infinity,
-          //   repeatType: "reverse",
-          //   repeatDelay: 1,
-          // }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            // repeat: Infinity,
+            repeatType: "reverse",
+            repeatDelay: 1,
+          }}
           strokeWidth={4}
           strokeDasharray="0 1"
           fill="none"

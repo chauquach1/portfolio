@@ -51,35 +51,38 @@ export default function WhoIAmBlock() {
   return (
     <motion.div
       ref={targetRef}
-      className=" flex flex-col justify-between items-start min-h-screen w-full bg-zinc-950 rounded-t-[50px] "
+      className="flex flex-col justify-between items-start min-h-screen h-max w-full bg-shark rounded-t-[50px]"
       style={{ clipPath: `inset( 0% ${insetX}% round 50px 50px 0px 0px)` }}
     >
-      <div>
-        <h1
-          className={` font-bold text-7xl lg:text-8xl xl:text-9xl text-white/30 my-[100px] align-text-top`}
-        >
-          {introQuotes[0]}
-        </h1>
-        <div className="p-3 max-w-[800px]">{introQuotes[1]}</div>
-      </div>
+      <div className=" flex flex-col justify-around h-screen w-full my-[100px]">
+          <h1
+            className={`font-bold text-6xl lg:text-8xl xl:text-9xl px-2 text-white/30 align-text-top`}
+          >
+            {introQuotes[0]}
+          </h1>
 
-      <div className="flex flex-row justify-center w-full h-max">
-        <div className="z-10 first:w-[300px] h-[300px] self-center rounded-[80px] overflow-hidden bg-white/20">
-          <NextImage
-            width={600}
-            height={600}
-            src={snowboardingSelfie}
-            alt="selfie"
-            classnames="m-5"
-          />
+        <div className=" flex flex-row relative justify-center self-center w-[300px] min-h-max h-full">
+          <div className="z-10 w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] self-center rounded-[80px] overflow-x-hidden bg-white/20">
+            <NextImage
+              width={600}
+              height={600}
+              src={snowboardingSelfie}
+              alt="selfie"
+              classnames="m-5"
+            />
+          </div>
+          <GreenDoodle />
+          <PurpleDoodle />
+          <RedDoodle />
         </div>
-        <GreenDoodle />
-        <PurpleDoodle />
-        <RedDoodle />
-      </div>
-
-      <div className="text-2xl text-white/30 text-end self-end mb-[100px]">
-        {introQuotes[2]}
+        <div className="text-xs sm:text-sm p-0 sm:p-3 flex flex-row flex-wrap px-2 gap-10 justify-between w-full">
+          <p className="block w-[600px] text-white text-start ">
+            {introQuotes[1]}
+          </p>
+          <p className="block text-sm sm:text-2xl text-white/30 text-end self-start">
+            {introQuotes[2]}
+          </p>
+        </div>
       </div>
     </motion.div>
   );

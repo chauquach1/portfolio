@@ -4,14 +4,9 @@ import painting from "../../public/painting.jpeg";
 
 import {
   motion,
-  useScroll,
-  useVelocity,
   useMotionValueEvent,
   useTransform,
-  cubicBezier,
-  useSpring,
   useMotionValue,
-  useAnimate,
 } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
@@ -85,7 +80,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="flex flex-col h-screen justify-center  text-black/70 items-center "
+      className="flex  flex-col h-screen justify-center w-full  text-[#c9ccbb] items-center "
     >
       <motion.div
         id="intro-card"
@@ -115,7 +110,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           style={{ opacity }}
-          className=" w-full text-center font-bold min-h-[80px] text-2xl text-black/40"
+          className=" w-full text-center font-bold min-h-[80px] text-2xl "
         >
           {caption}
         </motion.div>
